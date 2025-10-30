@@ -290,7 +290,7 @@ body {
 .specialty-card {
   background-color: rgba(255, 255, 255, 0.08);
   border: 0.5px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  /* border-radius: 8px; */
   transition: all 0.35s ease;
   height: 385px;
   cursor: pointer;
@@ -609,7 +609,7 @@ body {
 .service-card {
   background: var(--card-bg);
   color: #0f172a;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -1026,7 +1026,7 @@ body {
 .specialty-card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  border-radius: 20px;
+  /* border-radius: 20px; */
   border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 2.5rem 2rem;
   text-align: center;
