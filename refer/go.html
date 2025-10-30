@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tera — Exact Recreate (PDF)</title>
+
+  <!-- Google font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN (quick dev) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    :root{
+      --brand-blue: #1b2a78;
+      --accent-blue: #2256F3; /* This is the bright blue from the image */
+      --panel-blue: #243274;
+    }
+    html,body { height: 100%; }
+    body {
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      background: #ffffff;
+      color: #0f172a;
+    }
+    /* Force the main container to match MacBook Pro 16" design width */
+    .design-frame {
+      max-width: 1728px; /* matches your Figma MacBook Pro 16" artboard */
+      margin: 0 auto; /* Center the design frame itself */
+    }
+
+    /* subtle outline large numbers like reference */
+    .outline-number{
+      -webkit-text-stroke: 1px rgba(27,42,120,0.12);
+      color: transparent;
+      font-weight: 800;
+    }
+
+    /* card shadow matching premium look */
+    .card-shadow{ box-shadow: 0 12px 40px rgba(6,20,40,0.08); }
+
+    /* small helper for hero gradient text look - CHANGED to solid color */
+    .hero-accent { color: var(--accent-blue); }
+
+    /* Hide scrollbar for testimonial track */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+  </style>
+</head>
+<body>
+  <!-- Outer wrapper centered -->
+  <div class="min-h-screen flex flex-col items-center">
+    <div class="design-frame w-full">
+
+      <!-- NAV -->
+      <!-- The header content is constrained by its parent's px-10 -->
+      <header class="w-full px-10">
+        <div class="max-w-7xl mx-auto py-6 flex items-center justify-between">
+          <a class="flex items-center gap-4" href="#">
+            <!-- Logo changed to text as per design -->
+            <span class="text-3xl font-bold text-[var(--accent-blue)]">Tera</span>
+          </a>
+
+          <nav class="hidden lg:flex gap-8 text-sm items-center">
+            <a href="#" class="hover:text-blue-600">Home</a>
+            <a href="#" class="hover:text-blue-600">About</a>
+            <a href="#" class="hover:text-blue-600">Services</a>
+            <a href="#" class="hover:text-blue-600">Case studies</a>
+            <a href="#" class="hover:text-blue-600">Team</a>
+            <a href="#" class="hover:text-blue-600">Ecosystem</a>
+          </nav>
+
+          <div class="hidden lg:flex items-center gap-4">
+            <!-- "Get started" button from original design -->
+            <a href="#" class="px-5 py-2 rounded-full bg-[var(--accent-blue)] text-white text-sm shadow">Get started</a>
+          </div>
+
+          <!-- mobile menu button -->
+          <div class="lg:hidden">
+            <button id="mobileToggle" class="p-2 rounded-md" aria-label="Open menu">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- mobile nav (hidden by default) -->
+        <div id="mobileNav" class="hidden lg:hidden border-t">
+          <div class="px-6 py-4 space-y-3">
+            <a class="block">Home</a>
+            <a class="block">About</a>
+            <a class="block">Services</a>
+            <a class="block">Case studies</a>
+            <a class="block">Team</a>
+            <a class="block">Ecosystem</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- HERO -->
+      <main>
+        <!-- Section padding (px-10) for mobile, max-w-7xl for desktop -->
+        <!-- Increased vertical padding -->
+        <section class="px-10 pt-12 pb-20">
+          <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Left text -->
+            <div data-aos="fade-right" data-aos-duration="700" class="lg:pr-12">
+              <!-- h1 styling updated to match solid color from image -->
+              <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight hero-accent">
+                Empowering Minds,<br/> Elevating Workplaces.
+              </h1>
+              <!-- Paragraph added from design -->
+              <p class="mt-6 text-lg text-slate-600 max-w-xl">
+                We Will Help You to Understand Solve the Probleme
+              </p>
+
+              <!-- Button block updated to "Learn more" as per PDF -->
+              <div class="mt-8 flex items-center gap-4">
+                <a href="#" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[var(--accent-blue)] text-white text-sm">
+                  Learn more
+                </a>
+              </div>
+            </div>
+
+            <!-- Right illustration -->
+            <div class="flex justify-center lg:justify-end" data-aos="fade-left" data-aos-duration="700">
+              <!-- Image reverted to original unsplash URL -->
+              <div class="w-full max-w-[560px]">
+                <img
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto:format&fit=crop"
+                  alt="hero illustration"
+                  class="w-full h-auto rounded-md object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ABOUT (A Temple of Health) -->
+        <!-- Increased vertical padding -->
+        <section class="px-10 pb-20">
+          <!-- Constrained content wrapper -->
+          <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            <!-- left column: heading + bullets -->
+            <div class="lg:col-span-1" data-aos="fade-up" data-aos-duration="650">
+              <h2 class="text-4xl font-bold text-[var(--accent-blue)] leading-tight">A Temple of<br/> Health</h2>
+              <!-- Bullet points updated to match design -->
+              <ul class="mt-6 space-y-3 text-slate-700">
+                <li class="flex items-start gap-3">
+                  <span class="inline-block w-2 h-2 rounded-full bg-[var(--accent-blue)] mt-2"></span>
+                  Free Consultants
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="inline-block w-2 h-2 rounded-full bg-[var(--accent-blue)] mt-2"></span>
+                  Mental Satisfactions
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="inline-block w-2 h-2 rounded-full bg-[var(--accent-blue)] mt-2"></span>
+                  Practical training
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="inline-block w-2 h-2 rounded-full bg-[var(--accent-blue)] mt-2"></span>
+                  Psychology-based approach
+                </li>
+              </ul>
+              <!-- "Watch our video" link ADDED as per PDF -->
+              <a href="#" class="mt-6 inline-flex items-center gap-2 text-indigo-600 font-medium">
+                <!-- Icon Placeholder -->
+                <img src="https://placehold.co/20x20/4338CA/FFFFFF?text=P" alt="play icon" class="w-5 h-5 rounded-full">
+                Watch our video
+              </a>
+            </div>
+
+            <!-- right column: big card matching screenshot -->
+            <div class="lg:col-span-2" data-aos="fade-left" data-aos-duration="650">
+              <div class="bg-white rounded-xl p-8 card-shadow">
+                <!-- Grid changed to 1 col, as inner image is removed -->
+                <div class="grid grid-cols-1 gap-6 items-center">
+                  <div>
+                    <h3 class="text-2xl font-semibold">Empowering Minds — Enhancing Wellbeing</h3>
+                    <p class="mt-3 text-slate-600">Tera Wellbeing is a psychology-based organisation dedicated to nurturing personal growth and workplace mental health. We empower individuals and teams through counselling, training and community programs.</p>
+
+                    <div class="mt-6 flex flex-col items-start gap-6">
+                      <!-- Link text updated to "Know More About Us" with arrow -->
+                      <a href="#" class="flex items-center gap-2 text-indigo-600 font-medium">
+                        Know More About Us &rarr;
+                      </a>
+                      <!-- Stats block MOVED under link as per PDF -->
+                      <div class="flex gap-8 text-slate-700">
+                        <div><strong class="text-2xl">2850+</strong><div class="text-xs text-slate-500">Clients</div></div>
+                        <div><strong class="text-2xl">1245+</strong><div class="text-xs text-slate-500">Sessions</div></div>
+                        <div><strong class="text-2xl">3358+</strong><div class="text-xs text-slate-500">Outcomes</div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SERVICES band (deep blue) -->
+        <!-- Full width background, constrained content -->
+        <!-- Increased vertical padding -->
+        <section class="bg-[var(--brand-blue)] text-white py-20">
+          <div class="max-w-7xl mx-auto px-10">
+            <!-- Title changed and filter buttons removed as per image -->
+            <div class="flex items-center justify-between mb-8">
+              <!-- Font size/weight updated -->
+              <h3 class="text-3xl font-bold">Our services</h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <!-- service card 1 - SHARP corners, title updated, icon placeholder, ADDED h-96 -->
+              <article class="bg-white text-slate-900 p-6 card-shadow h-96 flex flex-col">
+                <img src="https://placehold.co/48x48/E0E7FF/3730A3?text=Icon" alt="icon" class="w-12 h-12 rounded-md">
+                <h4 class="mt-4 font-semibold">Counselling & wellbeing Services</h4>
+                <p class="mt-2 text-sm text-slate-500">One-to-one counselling and workplace programs.</p>
+                <a class="mt-auto inline-flex items-center gap-2 text-sm text-blue-600 font-medium" href="#">Explore →</a>
+              </article>
+
+              <!-- service card 2 - SHARP corners, title updated, icon placeholder, ADDED h-96 -->
+              <article class="bg-white text-slate-900 p-6 card-shadow h-96 flex flex-col">
+                <img src="https://placehold.co/48x48/E0E7FF/3730A3?text=Icon" alt="icon" class="w-12 h-12 rounded-md">
+                <h4 class="mt-4 font-semibold">Counselling & wellbeing Services</h4>
+                <p class="mt-2 text-sm text-slate-500">Workshops & leadership coaching.</p>
+                <a class="mt-auto inline-flex items-center gap-2 text-sm text-blue-600 font-medium" href="#">Explore →</a>
+              </article>
+
+              <!-- service card 3 - SHARP corners, title updated, icon placeholder, ADDED h-96 -->
+              <article class="bg-white text-slate-900 p-6 card-shadow h-96 flex flex-col">
+                <img src="https://placehold.co/48x48/E0E7FF/3730A3?text=Icon" alt="icon" class="w-12 h-12 rounded-md">
+                <h4 class="mt-4 font-semibold">Counselling & wellbeing Services</h4>
+                <p class="mt-2 text-sm text-slate-500">Outreach & partnerships.</p>
+                <a class="mt-auto inline-flex items-center gap-2 text-sm text-blue-600 font-medium" href="#">Explore →</a>
+              </article>
+
+              <!-- service card 4 - SHARP corners, title updated, icon placeholder, ADDED h-96 -->
+              <article class="bg-white text-slate-900 p-6 card-shadow h-96 flex flex-col">
+                <img src="https://placehold.co/48x48/E0E7FF/3730A3?text=Icon" alt="icon" class="w-12 h-12 rounded-md">
+                <h4 class="mt-4 font-semibold">Counselling & wellbeing Services</h4>
+                <p class="mt-2 text-sm text-slate-500">Tailored training packages.</p>
+                <a class="mt-auto inline-flex items-center gap-2 text-sm text-blue-600 font-medium" href="#">Explore →</a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- CASE STUDIES - CARD DESIGN REBUILT -->
+        <!-- Increased vertical padding -->
+        <section class="px-10 py-20">
+          <!-- Constrained content wrapper -->
+          <div class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-between mb-8">
+              <!-- Font size/weight updated -->
+              <h3 class="text-3xl font-bold">Latest Case Studies</h3>
+              <a class="text-sm text-blue-600" href="#">Explore All →</a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Card 1 - SHARP corners, text overlay, CHANGED to h-96 -->
+              <article class="card-shadow bg-white relative h-96 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1400&auto:format&fit=crop" alt="case 1" class="w-full h-full object-cover">
+                <!-- Overlay Gradient -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <!-- Text Content -->
+                <div class="absolute bottom-0 left-0 p-5">
+                  <h4 class="font-semibold text-lg text-white">Improving team wellbeing</h4>
+                  <p class="text-sm text-slate-200 mt-1">A short summary of the case and impact.</p>
+                </div>
+              </article>
+
+              <!-- Card 2 - SHARP corners, text overlay, CHANGED to h-96 -->
+              <article class="card-shadow bg-white relative h-96 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1400&auto:format&fit=crop" alt="case 2" class="w-full h-full object-cover">
+                <!-- Overlay Gradient -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <!-- Text Content -->
+                <div class="absolute bottom-0 left-0 p-5">
+                  <h4 class="font-semibold text-lg text-white">Workplace resilience program</h4>
+                  <p class="mt-1 text-sm text-slate-200">Delivered across multiple remote teams.</p>
+                </div>
+              </article>
+
+              <!-- Card 3 - SHARP corners, text overlay, CHANGED to h-96 -->
+              <article class="card-shadow bg-white relative h-96 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?q=80&w=1400&auto:format&fit=crop" alt="case 3" class="w-full h-full object-cover">
+                <!-- Overlay Gradient -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <!-- Text Content -->
+                <div class="absolute bottom-0 left-0 p-5">
+                  <h4 class="font-semibold text-lg text-white">Community engagement</h4>
+                  <p class="mt-1 text-sm text-slate-200">Programs that promoted long-term wellbeing.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- How it Works -->
+        <!-- Increased vertical padding -->
+        <section class="px-10 py-20 bg-white">
+          <div class="max-w-4xl mx-auto text-center">
+            <!-- Font size/weight updated -->
+            <h3 class="text-3xl font-bold">How it Works</h3>
+            <p class="mt-4 text-slate-600">Simple, human-centered steps to start improving workplace wellbeing.</p>
+
+            <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8">
+              <!-- Text updated from PDF -->
+              <div data-aos="fade-up" data-aos-duration="600" class="text-center">
+                <div class="text-6xl outline-number">01</div>
+                <h4 class="mt-3 font-semibold text-lg">Talk to Us First</h4>
+                <p class="mt-2 text-sm text-slate-500">Reach out to our toom for a confidential conversobon</p>
+              </div>
+
+              <!-- Text updated from PDF -->
+              <div data-aos="fade-up" data-aos-duration="650" class="text-center">
+                <div class="text-6xl outline-number">02</div>
+                <h4 class="mt-3 font-semibold text-lg">Book an Appointment</h4>
+                <p class="mt-2 text-sm text-slate-500">Schedule a counseling er troming session ot your convenience</p>
+              </div>
+
+              <!-- Text updated from PDF -->
+              <div data-aos="fade-up" data-aos-duration="700" class="text-center">
+                <div class="text-6xl outline-number">03</div>
+                <h4 class="mt-3 font-semibold text-lg">Come Sit With Us</h4>
+                <p class="mt-2 text-sm text-slate-500">tort your personalized wellbeing plan and akropenpe change</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION REBUILT: Our Specialties (from PDF) -->
+        <!-- Full width background, constrained content -->
+        <!-- Increased vertical padding -->
+        <section class="bg-[var(--brand-blue)] text-white py-20">
+          <div class="max-w-7xl mx-auto px-10">
+            <!-- Font size/weight updated -->
+            <h3 class="text-3xl font-bold text-center mb-10">Our specialties</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              
+              <!-- Card 1 - ROUNDED corners -->
+              <article class="bg-[var(--panel-blue)] text-white rounded-lg p-6 text-center">
+                <img src="https://placehold.co/48x48/FFFFFF/1E3A8A?text=Icon" alt="icon" class="w-12 h-12 mx-auto rounded-full">
+                <h4 class="mt-4 text-lg font-semibold">Empathy-driven Approach</h4>
+              </article>
+
+              <!-- Card 2 - ROUNDED corners -->
+              <article class="bg-[var(--panel-blue)] text-white rounded-lg p-6 text-center">
+                <img src="https://placehold.co/48x48/FFFFFF/1E3A8A?text=Icon" alt="icon" class="w-12 h-12 mx-auto rounded-full">
+                <h4 class="mt-4 text-lg font-semibold">Empathy-driven Approach</h4>
+              </article>
+
+              <!-- Card 3 - ROUNDED corners -->
+              <article class="bg-[var(--panel-blue)] text-white rounded-lg p-6 text-center">
+                <img src="https://placehold.co/48x48/FFFFFF/1E3A8A?text=Icon" alt="icon" class="w-12 h-12 mx-auto rounded-full">
+                <h4 class="mt-4 text-lg font-semibold">Empathy-driven Approach</h4>
+              </article>
+
+              <!-- Card 4 - ROUNDED corners -->
+              <article class="bg-[var(--panel-blue)] text-white rounded-lg p-6 text-center">
+                <img src="https://placehold.co/48x48/FFFFFF/1E3A8A?text=Icon" alt="icon" class="w-12 h-12 mx-auto rounded-full">
+                <h4 class="mt-4 text-lg font-semibold">Empathy-driven Approach</h4>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Team - CARD DESIGN REBUILT -->
+        <!-- Increased vertical padding -->
+        <section class="px-10 py-20">
+          <!-- Constrained content wrapper -->
+          <div class="max-w-7xl mx-auto">
+            <!-- Font size/weight updated -->
+            <h3 class="text-3xl font-bold text-center">Our team</h3>
+            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Card 1 - SHARP corners, text overlay, CHANGED to h-96 -->
+              <div class="bg-white card-shadow relative h-96 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto:format&fit=crop" alt="team 1" class="w-full h-full object-cover">
+                <!-- Overlay Gradient -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <!-- Text Content -->
+                <div class="absolute bottom-0 left-0 p-5">
+                  <h4 class="font-semibold text-lg text-white">Jamie Oliver</h4>
+                  <p class="text-sm text-slate-200 mt-1">Therapy Expert</p>
+                  <div class="flex text-yellow-400 mt-1">★★★★★</div>
+                </div>
+              </div>
+
+              <!-- Card 2 - SHARP corners, text overlay, CHANGED to h-96 -->
+              <div class="bg-white card-shadow relative h-96 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1545996124-64fa9f0d49a5?q=80&w=1200&auto:format&fit=crop" alt="team 2" class="w-full h-full object-cover">
+                <!-- Overlay Gradient -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <!-- Text Content -->
+                <div class="absolute bottom-0 left-0 p-5">
+                  <h4 class="font-semibold text-lg text-white">Jamie Oliver</h4>
+                  <p class="text-sm text-slate-200 mt-1">Therapy Expert</p>
+                  <div class="flex text-yellow-400 mt-1">★★★★★</div>
+                </div>
+              </div>
+
+              <!-- Card 3 - SHARP corners, text overlay, CHANGED to h-96 -->
+              <div class="bg-white card-shadow relative h-96 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=1200&auto:format&fit=crop" alt="team 3" class="w-full h-full object-cover">
+                <!-- Overlay Gradient -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <!-- Text Content -->
+                <div class="absolute bottom-0 left-0 p-5">
+                  <h4 class="font-semibold text-lg text-white">Jamie Oliver</h4>
+                  <p class="text-sm text-slate-200 mt-1">Therapy Expert</p>
+                  <div class="flex text-yellow-400 mt-1">★★★★★</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Brand & Partners - Rebuilt to match PDF design -->
+        <!-- Full width background, constrained content -->
+        <!-- Increased vertical padding -->
+        <section class="bg-sky-50 py-20">
+          <div class="max-w-7xl mx-auto px-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Left Graphic (from PDF) -->
+            <div class="lg:col-span-1" data-aos="fade-right">
+              <div class="relative w-full h-[450px]">
+                <!-- Background Image -->
+                <img src="https://images.unsplash.com/photo-1600880292203-94e96b8b1b05?q=80&w=1374&auto:format&fit=crop" alt="partner team" class="absolute inset-0 w-full h-full object-cover rounded-lg">
+                <!-- Overlay -->
+                <div class="absolute inset-0 bg-blue-900 opacity-70 rounded-lg"></div>
+                <!-- Text Content -->
+                <div class="absolute bottom-8 left-8 z-10">
+                  <div class="text-6xl font-bold text-white">50+</div>
+                  <div class="mt-2 text-2xl font-semibold text-white max-w-xs">BRANDS COLLABORATE WITH US</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Logos (from PDF) -->
+            <div class="lg:col-span-1" data-aos="fade-left">
+              <!-- Font size/weight updated -->
+              <h3 class="text-3xl font-bold">Brand & Partners</h3>
+              <p class="mt-3 text-slate-600 max-w-md">Collaborating with leading organisations to deliver better mental health outcomes.</p>
+              <div class="mt-8 grid grid-cols-3 gap-4">
+                <div class="h-20 bg-white rounded-lg border border-slate-200 flex items-center justify-center text-sm text-slate-500">Logo</div>
+                <div class="h-20 bg-white rounded-lg border border-slate-200 flex items-center justify-center text-sm text-slate-500">Logo</div>
+                <div class="h-20 bg-white rounded-lg border border-slate-200 flex items-center justify-center text-sm text-slate-500">Logo</div>
+                <div class="h-20 bg-white rounded-lg border border-slate-200 flex items-center justify-center text-sm text-slate-500">Logo</div>
+                <div class="h-20 bg-white rounded-lg border border-slate-200 flex items-center justify-center text-sm text-slate-500">Logo</div>
+                <div class="h-20 bg-white rounded-lg border border-slate-200 flex items-center justify-center text-sm text-slate-500">Logo</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Ecosystem -->
+        <!-- Increased vertical padding -->
+        <section class="px-10 py-20">
+          <!-- Constrained content wrapper -->
+          <div class="max-w-7xl mx-auto">
+            <!-- Font size/weight updated -->
+            <h3 class="text-3xl font-bold text-center">Our Ecosystem</h3>
+            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Card 1 - Icon placeholder - ROUNDED corners -->
+              <div class="rounded-lg border p-6 text-center">
+                <img src="https://placehold.co/56x56/E0E7FF/3730A3?text=Icon" alt="icon" class="w-14 h-14 mx-auto rounded-full">
+                <h4 class="mt-4 font-semibold text-lg">Tera Community</h4>
+                <p class="mt-2 text-sm text-slate-500">A safe space for ongoing peer support and resources.</p>
+                <a href="#" class="mt-4 inline-block text-sm text-blue-600">Join community →</a>
+              </div>
+
+              <!-- Card 2 - Icon placeholder - ROUNDED corners -->
+              <div class="rounded-lg border p-6 text-center">
+                <img src="https://placehold.co/56x56/E0E7FF/3730A3?text=Icon" alt="icon" class="w-14 h-14 mx-auto rounded-full">
+                <h4 class="mt-4 font-semibold text-lg">Tera Pathways</h4>
+                <p class="mt-2 text-sm text-slate-500">Guided programs and learning tracks for teams.</p>
+                <a href="#" class="mt-4 inline-block text-sm text-blue-600">Join community →</a>
+              </div>
+
+              <!-- Card 3 - Icon placeholder - ROUNDED corners -->
+              <div class="rounded-lg border p-6 text-center">
+                <img src="https://placehold.co/56x56/E0E7FF/3730A3?text=Icon" alt="icon" class="w-14 h-14 mx-auto rounded-full">
+                <h4 class="mt-4 font-semibold text-lg">Tera Labs</h4>
+                <p class="mt-2 text-sm text-slate-500">Research and innovation for workplace wellbeing.</p>
+                <a href="#" class="mt-4 inline-block text-sm text-blue-600">Join community →</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testimonials - CHANGED back to SCROLLING -->
+        <!-- Increased vertical padding -->
+        <section class="px-10 py-20 bg-white">
+          <div class="max-w-6xl mx-auto">
+            <!-- Font size/weight updated -->
+            <h3 class="text-3xl font-bold text-center">Testimonials</h3>
+            <!-- Container changed to SCROLLING container -->
+            <div class="mt-10 flex overflow-x-auto gap-6 pb-4 no-scrollbar">
+              
+              <!-- Testimonial 1 - ROUNDED corners, min-width set -->
+              <div class="bg-slate-50 p-6 rounded-lg card-shadow flex-shrink-0 w-full max-w-sm md:max-w-xs">
+                <div class="flex text-yellow-400">★★★★★</div>
+                <p class="text-slate-700 mt-3">"Tera Wellbeing helped transform our team's approach to mental health. Real impact."</p>
+                <div class="mt-4 flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1545996124-64fa9f0d49a5?q=80&w=200&auto:format&fit=crop" alt="" class="w-10 h-10 rounded-full object-cover">
+                  <div><div class="font-semibold">Dianne Russell</div><div class="text-xs text-slate-500">HR Manager, Acme</div></div>
+                </div>
+              </div>
+
+              <!-- Testimonial 2 - ROUNDED corners, min-width set -->
+              <div class="bg-slate-50 p-6 rounded-lg card-shadow flex-shrink-0 w-full max-w-sm md:max-w-xs">
+                <div class="flex text-yellow-400">★★★★★</div>
+                <p class="text-slate-700 mt-3">"Their workshops are practical, engaging, and evidence-based. Highly recommended."</p>
+                <div class="mt-4 flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto:format&fit=crop" alt="" class="w-10 h-10 rounded-full object-cover">
+                  <div><div class="font-semibold">Jamie Oliver</div><div class="text-xs text-slate-500">Founder, WellCo</div></div>
+                </div>
+              </div>
+              
+              <!-- Testimonial 3 - ROUNDED corners, min-width set -->
+              <div class="bg-slate-50 p-6 rounded-lg card-shadow flex-shrink-0 w-full max-w-sm md:max-w-xs">
+                <div class="flex text-yellow-400">★★★★★</div>
+                <p class="text-slate-700 mt-3">"The one-on-one sessions were a game-changer for our leadership team."</p>
+                <div class="mt-4 flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=200&auto:format&fit=crop" alt="" class="w-10 h-10 rounded-full object-cover">
+                  <div><div class="font-semibold">Chris Parker</div><div class="text-xs text-slate-500">COO, TechCorp</div></div>
+                </div>
+              </div>
+
+              <!-- Testimonial 4 (to enable scroll) -->
+              <div class="bg-slate-50 p-6 rounded-lg card-shadow flex-shrink-0 w-full max-w-sm md:max-w-xs">
+                <div class="flex text-yellow-400">★★★★★</div>
+                <p class="text-slate-700 mt-3">"A truly valuable partner for any organisation looking to improve mental wellbeing."</p>
+                <div class="mt-4 flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=200&auto:format&fit=crop" alt="" class="w-10 h-10 rounded-full object-cover">
+                  <div><div class="font-semibold">Alex Johnson</div><div class="text-xs text-slate-500">CEO, Innovate Ltd.</div></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        
+        <!-- ADDED: Latest news & events (from PDF) - CARD DESIGN REBUILT -->
+        <section class="px-10 py-20">
+          <div class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-between mb-8">
+              <h3 class="text-3xl font-bold">Latest news & events</h3>
+              <a class="text-sm text-blue-600" href="#">View More →</a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Card 1 - SHARP corners, text overlay, CHANGED to h-96 -->
+              <article class="card-shadow bg-white relative h-96 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1374&auto:format&fit=crop" alt="news 1" class="w-full h-full object-cover">
+                <!-- Overlay Gradient -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <!-- Text Content -->
+                <div class="absolute bottom-0 left-0 p-5">
+                  <h4 class="font-semibold text-lg text-white">we are great place work</h4>
+                  <p class="text-sm text-slate-200 mt-1">Dianne Russel</p>
+                  <a href="#" class="mt-3 inline-flex items-center gap-2 text-sm text-white font-medium">
+                    <!-- Icon Placeholder -->
+                    <img src="https://placehold.co/16x16/FFFFFF/000000?text=P" alt="play icon" class="w-4 h-4 rounded-full">
+                    Watch video
+                  </a>
+                </div>
+              </article>
+
+              <!-- Card 2 - SHARP corners, text overlay, CHANGED to h-96 -->
+              <article class="card-shadow bg-white relative h-96 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1470&auto:format&fit=crop" alt="news 2" class="w-full h-full object-cover">
+                <!-- Overlay Gradient -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <!-- Text Content -->
+                <div class="absolute bottom-0 left-0 p-5">
+                  <h4 class="font-semibold text-lg text-white">we are great place work</h4>
+                  <p class="text-sm text-slate-200 mt-1">Dianne Russel</p>
+                  <a href="#" class="mt-3 inline-flex items-center gap-2 text-sm text-white font-medium">
+                    <!-- Icon Placeholder -->
+                    <img src="https://placehold.co/16x16/FFFFFF/000000?text=P" alt="play icon" class="w-4 h-4 rounded-full">
+                    Watch video
+                  </a>
+                </div>
+              </article>
+
+              <!-- Card 3 - SHARP corners, text overlay, CHANGED to h-96 -->
+              <article class="card-shadow bg-white relative h-96 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1470&auto:format&fit=crop" alt="news 3" class="w-full h-full object-cover">
+                <!-- Overlay Gradient -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <!-- Text Content -->
+                <div class="absolute bottom-0 left-0 p-5">
+                  <h4 class="font-semibold text-lg text-white">we are great place work</h4>
+                  <p class="text-sm text-slate-200 mt-1">Dianne Russel</p>
+                  <a href="#" class="mt-3 inline-flex items-center gap-2 text-sm text-white font-medium">
+                    <!-- Icon Placeholder -->
+                    <img src="https://placehold.co/16x16/FFFFFF/000000?text=P" alt="play icon" class="w-4 h-4 rounded-full">
+                    Watch video
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- ADDED: CTA Section (from PDF) -->
+        <section class="bg-[var(--brand-blue)] text-white py-20">
+          <div class="max-w-4xl mx-auto px-10 text-center">
+            <h2 class="text-4xl font-bold">We are looking forward to meet you</h2>
+            <a href="#" class="mt-8 inline-block px-8 py-3 rounded-full bg-green-500 text-white font-medium shadow-lg">
+              WhatsApp
+            </a>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- FOOTER (REBUILT to match PDF) -->
+      <footer class="bg-slate-900 text-slate-300 mt-0">
+        <div class="max-w-7xl mx-auto px-10 py-16 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          
+          <!-- Col 1: Logo & Text -->
+          <div class="md:col-span-1 lg:col-span-1">
+            <span class="text-3xl font-bold text-white">Tera</span>
+            <p class="mt-4 text-sm text-slate-400 max-w-xs">Psychology-based programs and consultancy to help organisations thrive.</p>
+          </div>
+
+          <!-- Col 2: Nav List 1 (from PDF) -->
+          <div>
+            <h5 class="font-semibold text-white mb-4">Quick Links</h5>
+            <ul class="text-sm space-y-2">
+              <li><a href="#" class="hover:text-white">Home</a></li>
+              <li><a href="#" class="hover:text-white">About</a></li>
+              <li><a href="#" class="hover:text-white">Our services</a></li>
+              <li><a href="#" class="hover:text-white">Our Team</a></li>
+              <li><a href="#" class="hover:text-white">Ecosystem</a></li>
+              <li><a href="#" class="hover:text-white">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Nav List 2 (from PDF) -->
+          <div>
+            <h5 class="font-semibold text-white mb-4">Our Services</h5>
+            <ul class="text-sm space-y-2">
+              <li><a href="#" class="hover:text-white">Counselling & wellbeing</a></li>
+              <li><a href="#" class="hover:text-white">Training & Capacity Building</a></li>
+              <li><a href="#" class="hover:text-white">Professional Learning</a></li>
+              <li><a href="#" class="hover:text-white">Community Outreach</a></li>
+              <li><a href="#" class="hover:text-white">Collaboration</a></li>
+            </ul>
+          </div>
+          
+          <!-- Col 4: Contact (from PDF) -->
+          <div>
+            <h5 class="font-semibold text-white mb-4">Contact</h5>
+            <ul class="text-sm space-y-3">
+              <li class="flex items-start gap-3">
+                <img src="https://placehold.co/20x20/FFFFFF/1E3A8A?text=L" alt="location icon" class="w-5 h-5 mt-0.5">
+                <span>123 Main St, Anytown, USA</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <img src="https://placehold.co/20x20/FFFFFF/1E3A8A?text=P" alt="phone icon" class="w-5 h-5 mt-0.5">
+                <span>+91 99999 99999</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <img src="https://placehold.co/20x20/FFFFFF/1E3A8A?text=W" alt="whatsapp icon" class="w-5 h-5 mt-0.5">
+                <span>+91 99999 99999</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <img src="https://placehold.co/20x20/FFFFFF/1E3A8A?text=E" alt="email icon" class="w-5 h-5 mt-0.5">
+                <span>hello@tera.org</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Col 5: Connect (from PDF) -->
+          <div>
+            <h5 class="font-semibold text-white mb-4">Connect</h5>
+            <div class="flex gap-3">
+              <a href="#" class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center hover:bg-blue-500">
+                <img src="https://placehold.co/16x16/FFFFFF/1E3A8A?text=F" alt="social icon" class="w-4 h-4">
+              </a>
+              <a href="#" class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center hover:bg-blue-500">
+                <img src="https://placehold.co/16x16/FFFFFF/1E3A8A?text=T" alt="social icon" class="w-4 h-4">
+              </a>
+              <a href="#" class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center hover:bg-blue-500">
+                <img src="https://placehold.co/16x16/FFFFFF/1E3A8A?text=I" alt="social icon" class="w-4 h-4">
+              </a>
+              <a href="#" class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center hover:bg-blue-500">
+                <img src="https://placehold.co/16x16/FFFFFF/1E3A8A?text=L" alt="social icon" class="w-4 h-4">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="border-t border-slate-800">
+          <div class="max-w-7xl mx-auto px-10 py-6 text-sm text-slate-500 flex flex-col sm:flex-row items-center justify-between">
+            <div>© <span id="year"></span> Tera. All rights reserved.</div>
+            <div class="mt-2 sm:mt-0">
+              <a href="#" class="hover:text-white">Privacy</a> · <a href="#" class="hover:text-white">Terms</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- Minimal JS -->
+  <script>
+    // AOS init
+    AOS.init({ once: true, easing: 'ease-out-cubic', duration: 650 });
+
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // mobile nav toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    if (mobileToggle) {
+      mobileToggle.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+    }
+    
+    // Testimonial rotator - not needed for scroll
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,108 @@
+ :root {
+      --brand-blue: #1b2a78;
+      --accent-blue: #2256f3;
+      --panel-blue: #243274;
+      --section-blue: #263A8B;
+      --badge-blue: #2E89FF;
+      --partner-text: #263A8B;
+    }
+/* whatsapp banner */
+.whatsapp-section {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* Background image */
+.whatsapp-section .bg-image {
+  position: absolute;
+  inset: 0;
+  background: url("../img/whatsapp_banner.png") center/cover no-repeat;
+  z-index: 0;
+  transform: scale(1);
+  transition: transform 3s ease-out;
+}
+
+/* Dark overlay */
+.whatsapp-section .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+/* Content container */
+.whatsapp-section .container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Text */
+.whatsapp-section .content {
+  text-align: left;
+}
+
+/* Button */
+.whatsapp-section .whatsapp-btn {
+  background-color: #25d366;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  left: 220%;
+  top: -90px;
+}
+
+.whatsapp-section .whatsapp-btn:hover {
+  background-color: #1ebc59;
+  transform: scale(1.05);
+}
+
+/* Hover zoom effect on background */
+.whatsapp-section:hover .bg-image {
+  transform: scale(1.05);
+}
+.content{
+    position: relative;
+    align-items: start;
+    left: -10%;
+}
+/* ourteam */
+.team-section, .about-section {
+  transition: all 0.4s ease;
+}
+
+.team-section img,
+.about-section img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-section img:hover,
+.about-section img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.bi-star-fill, .bi-star-half {
+  font-size: 0.9rem;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 1.8rem; }
+  .team-img { height: 220px; }
+}

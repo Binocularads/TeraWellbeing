@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Favicon for most browsers -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/tera_favicon.png">
+
+<!-- Apple Touch Icon (iPhone/iPad homescreen) -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/tera_favicon.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <link rel="stylesheet" href="assets/style/main.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+
+<body class="text-gray-800 bg-white">
+
+<header class="w-full px-6 sm:px-10 py-4 shadow-sm bg-white sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <!-- Logo -->
+    <a href="home.html" class="flex items-center gap-3">
+      <img src="assets/img/logo tera.png" alt="Tera logo" class="w-10 sm:w-12 h-auto object-contain" />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden lg:flex gap-8 text-sm font-medium text-slate-700">
+      <a href="home.html" class="hover:text-[var(--accent-blue)] transition">Home</a>
+      <a href="about.html" class="hover:text-[var(--accent-blue)] transition">About</a>
+      <a href="servise.html" class="hover:text-[var(--accent-blue)] transition">Services</a>
+      <a href="#" class="hover:text-[var(--accent-blue)] transition">Case Studies</a>
+      <a href="#" class="hover:text-[var(--accent-blue)] transition">Team</a>
+      <a href="#" class="hover:text-[var(--accent-blue)] transition">Ecosystem</a>
+      <a href="contact.html" class="hover:text-[var(--accent-blue)] transition">Contact</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobileToggle" class="lg:hidden p-2    hover:bg-slate-50 transition">
+      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+        <path d="M4 7h16M4 12h16M4 17h16" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileNav" class="hidden lg:hidden border-t border-slate-200 bg-white">
+    <div class="px-6 py-4 space-y-3 text-slate-700 font-medium">
+      <a href="home.html" class="block hover:text-[var(--accent-blue)]">Home</a>
+      <a href="about.html" class="block hover:text-[var(--accent-blue)]">About</a>
+      <a href="servise.html" class="block hover:text-[var(--accent-blue)]">Services</a>
+      <a href="#" class="block hover:text-[var(--accent-blue)]">Case Studies</a>
+      <a href="#" class="block hover:text-[var(--accent-blue)]">Team</a>
+      <a href="#" class="block hover:text-[var(--accent-blue)]">Ecosystem</a>
+      <a href="contact.html" class="block hover:text-[var(--accent-blue)]">Contact</a>
+    </div>
+  </div>
+</header>
+
+  <!-- ✅ Get in touch section -->
+
+<section class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <!-- Heading -->
+    <h2 class="text-4xl font-semibold text-gray-900 mb-3">Get in touch</h2>
+    <p class="text-gray-500 mb-16">We’re here to support on your wellness journey. Reach out to our team</p>
+
+    <!-- Cards -->
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <!-- Card 1 -->
+      <div class="group border border-gray-200 rounded-xl p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+        <div class="text-left">
+          <i class="bi bi-envelope-fill text-2xl text-gray-800 mb-4"></i>
+          <h3 class="font-semibold text-gray-800 mb-2">Email Support</h3>
+          <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+            Send us a message and we’ll get back to you within 24 hours with personalized guidance.
+          </p>
+          <a href="#" class="text-sm font-medium text-gray-800 flex items-center gap-2 hover:gap-3 transition-all">
+            Send email <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group border border-gray-200 rounded-xl p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+        <div class="text-left">
+          <i class="bi bi-telephone-fill text-2xl text-gray-800 mb-4"></i>
+          <h3 class="font-semibold text-gray-800 mb-2">Phone Consultation</h3>
+          <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+            Speak directly with our wellness experts for immediate support and guidance.
+          </p>
+          <a href="#" class="text-sm font-medium text-gray-800 flex items-center gap-2 hover:gap-3 transition-all">
+            Call now <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="group border border-gray-200 rounded-xl p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+        <div class="text-left">
+          <i class="bi bi-geo-alt-fill text-2xl text-gray-800 mb-4"></i>
+          <h3 class="font-semibold text-gray-800 mb-2">Visit our center</h3>
+          <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+            Experience our peaceful environment with in-person consultation.
+          </p>
+          <a href="#" class="text-sm font-medium text-gray-800 flex items-center gap-2 hover:gap-3 transition-all">
+            Get direction <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+      
+<!-- ✅ FAQ Section -->
+<section class="py-24 bg-white">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-2 text-gray-900">Common Questions</h2>
+    <p class="text-gray-600 mb-10">Find answers to frequently asked questions</p>
+
+    <!-- FAQ Items -->
+    <div class="text-left border-t border-gray-300 divide-y divide-gray-300" id="faqList">
+      <!-- Q1 -->
+      <div class="faq-item py-5 cursor-pointer transition-all">
+        <div class="flex justify-between items-center">
+          <h4 class="font-medium text-gray-800 text-base">How quickly will I receive a response?</h4>
+          <span class="faq-icon text-2xl text-gray-700">+</span>
+        </div>
+        <div class="faq-answer hidden mt-3 text-sm text-gray-600">
+          We respond to all enquiries within 24 hours during business hours.
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="faq-item py-5 cursor-pointer transition-all">
+        <div class="flex justify-between items-center">
+          <h4 class="font-medium text-gray-800 text-base">What services do you provide?</h4>
+          <span class="faq-icon text-2xl text-gray-700">+</span>
+        </div>
+        <div class="faq-answer hidden mt-3 text-sm text-gray-600">
+          We provide counselling, training, professional learning, and community outreach programs.
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="faq-item py-5 cursor-pointer transition-all">
+        <div class="flex justify-between items-center">
+          <h4 class="font-medium text-gray-800 text-base">Can I book an online consultation?</h4>
+          <span class="faq-icon text-2xl text-gray-700">+</span>
+        </div>
+        <div class="faq-answer hidden mt-3 text-sm text-gray-600">
+          Yes, you can easily book online consultations through our website or via email.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+      </main>
+
+   <footer class="footer-section">
+  <div class="footer-container">
+    <!-- Top: Logo + Columns -->
+    <div class="footer-top">
+      <div class="footer-grid">
+        
+        <!-- Column 1 -->
+        <div class="footer-col">
+          <img src="assets/img/logo tera.png" alt="Tera Wellbeing Logo" class="footer-logo" />
+          <p class="footer-desc">
+            A psychology-based organisation dedicated to nurturing personal growth and workplace wellbeing.
+          </p>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Ecosystem</a></li>
+            <li><a href="#">Collaboration</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-col">
+          <h5>Our Services</h5>
+          <ul>
+            <li><a href="#">Counselling & Wellbeing</a></li>
+            <li><a href="#">Training & Capacity Building</a></li>
+            <li><a href="#">Professional Learning</a></li>
+            <li><a href="#">Community Outreach</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul class="footer-contact">
+            <li><i class="bi bi-geo-alt"></i> Kochi, Kerala, India</li>
+            <li><i class="bi bi-telephone"></i> +91 825 654 856</li>
+            <li><i class="bi bi-envelope"></i> terawellbeing@gmail.com</li>
+            <li><i class="bi bi-whatsapp"></i> +91 825 654 856</li>
+          </ul>
+
+          <div class="footer-social">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Row -->
+    <div class="footer-bottom">
+      <p>Privacy Policy | Terms & Conditions | Transparency</p>
+      <p>Designed by <span>Binocular Ads</span></p>
+    </div>
+  </div>
+</footer>
+  <!-- GSAP for smooth micro-animations (mobile nav) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="assets/js/aos-init.js"></script>
+  <script src="assets/js/ui-interactions.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/our_servise.js"></script>
+
+  <!-- ✅ FAQ Toggle Script -->
+<script>
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach(item => {
+    item.addEventListener("click", () => {
+      const answer = item.querySelector(".faq-answer");
+      const icon = item.querySelector(".faq-icon");
+      const isOpen = !answer.classList.contains("hidden");
+
+      // Close all open FAQs
+      document.querySelectorAll(".faq-answer").forEach(a => a.classList.add("hidden"));
+      document.querySelectorAll(".faq-icon").forEach(i => i.textContent = "+");
+
+      // Open current one if it was closed
+      if (!isOpen) {
+        answer.classList.remove("hidden");
+        icon.textContent = "−";
+      }
+    });
+  });
+</script>
+</body>
+</html>

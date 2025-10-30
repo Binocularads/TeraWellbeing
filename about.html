@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> About Us</title>
+  <!-- Favicon for most browsers -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/tera_favicon.png">
+  <!-- Apple Touch Icon (iPhone/iPad homescreen) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/tera_favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    :root {
+      --brand-blue: #1b2a78;
+      --light-blue: #e9f1ff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #222;
+    }
+
+    .gradient-header {
+      background: linear-gradient(90deg, #1b2a78 0%, #3366ff 100%);
+    }
+
+    h2 {
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .card {
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+    }
+
+
+    .counter {
+      font-weight: 700;
+      color: var(--brand-blue);
+    }
+
+    .section-bg-lightblue {
+      background-color: var(--light-blue);
+    }
+
+    /* Image styling */
+    .about-img {
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #121212;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="w-full px-6 sm:px-10 py-4 shadow-sm bg-white sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <!-- Logo -->
+      <a href="home.html" class="flex items-center gap-3">
+        <img src="assets/img/logo tera.png" alt="Tera logo" class="w-10 sm:w-12 h-auto object-contain" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex gap-8 text-sm font-medium text-slate-700">
+        <a href="home.html" class="hover:text-[var(--accent-blue)] transition">Home</a>
+        <a href="about.html" class="hover:text-[var(--accent-blue)] transition">About</a>
+        <a href="servise.html" class="hover:text-[var(--accent-blue)] transition">Services</a>
+        <a href="#" class="hover:text-[var(--accent-blue)] transition">Case Studies</a>
+        <a href="#" class="hover:text-[var(--accent-blue)] transition">Team</a>
+        <a href="#" class="hover:text-[var(--accent-blue)] transition">Ecosystem</a>
+        <a href="contact.html" class="hover:text-[var(--accent-blue)] transition">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileToggle" class="lg:hidden p-2    hover:bg-slate-50 transition">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileNav" class="hidden lg:hidden border-t border-slate-200 bg-white">
+      <div class="px-6 py-4 space-y-3 text-slate-700 font-medium">
+        <a href="home.html" class="block hover:text-[var(--accent-blue)]">Home</a>
+        <a href="about.html" class="block hover:text-[var(--accent-blue)]">About</a>
+        <a href="servise.html" class="block hover:text-[var(--accent-blue)]">Services</a>
+        <a href="#" class="block hover:text-[var(--accent-blue)]">Case Studies</a>
+        <a href="#" class="block hover:text-[var(--accent-blue)]">Team</a>
+        <a href="#" class="block hover:text-[var(--accent-blue)]">Ecosystem</a>
+        <a href="contact.html" class="block hover:text-[var(--accent-blue)]">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ✅ Hero Section -->
+  <section class="gradient-header text-white py-24 text-center">
+    <h1 class="text-5xl font-bold tracking-tight">About Us</h1>
+  </section>
+
+  <!-- ✅ Intro Section -->
+  <section class="max-w-7xl mx-auto py-16 px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="text-2xl font-semibold text-gray-900 mb-2">Trusted Partner in Psychology</h2>
+      <h3 class="text-xl text-[var(--brand-blue)] font-medium mb-6">Driven Wellness and Organizational Growth</h3>
+      <p class="text-gray-600 leading-relaxed mb-4">
+        We are a trusted psychology-based well-being organization dedicated to delivering evidence-based support,
+        professional development, and essential capacity-building programs. We proudly serve individuals, teams,
+        and organizations to enhance mental resilience and drive growth.
+      </p>
+      <p class="text-gray-600 leading-relaxed">
+        Our certified clinical experts maintain rigorous standards, empower minds, and build sustainable
+        organizational culture for positive transformation.
+      </p>
+    </div>
+    <img src="assets/img/about1.jpg" alt="About" class="about-img">
+  </section>
+
+  <!-- ✅ Mission & Vision -->
+  <!-- ✅ Mission, Vision, Values Section -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <!-- Mission - Image - Vision Row -->
+      <div class="grid md:grid-cols-3 gap-6 mb-16 items-center">
+
+        <!-- Our Mission Card -->
+        <div class="bg-[#e9f1ff] rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+          <h3 class="font-semibold text-[15px] text-gray-800 mb-2">Our Mission</h3>
+          <p class="text-gray-700 text-[14px] leading-relaxed">
+            To deliver psychology-driven solutions including counselling and professional training—
+            with compassion, scientific rigor, to foster resilience, and sustain long-term growth.
+          </p>
+        </div>
+        <!-- Center Image -->
+        <div class="rounded-xl overflow-hidden">
+          <img src="assets/img/about2.jpg" alt="Mission & Vision" class="w-full h-full object-cover" />
+        </div>
+        <!-- Our Vision Card -->
+        <div class="bg-[#e9f1ff] rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+          <h3 class="font-semibold text-[15px] text-gray-800 mb-2">Our Vision</h3>
+          <p class="text-gray-700 text-[14px] leading-relaxed">
+            To be the leading trusted authority in well-being and psychological empowerment in the region,
+            recognized for clinical excellence, innovative program design, and measurable impact.
+          </p>
+        </div>
+      </div>
+      <!-- Our Values Section -->
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <!-- Values Text -->
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Values</h2>
+          <div class="bg-[#e9f1ff] rounded-xl p-6">
+            <p class="text-gray-700 text-[14px] leading-relaxed mb-4">
+              Our values are the foundation of our practice and the reason we have been a trusted source
+              for transformative therapeutic services since [Insert Founding Year].
+            </p>
+            <ul class="text-gray-700 text-[14px] leading-relaxed list-disc pl-5 space-y-2">
+              <li><strong>Clinical Excellence:</strong> Commitment to quality, safety, and evidence-based practice.</li>
+              <li><strong>Confidentiality:</strong> Protection of client privacy and discretion.</li>
+              <li><strong>Empathy & Respect:</strong> Deep respect for individuality and dignity.</li>
+              <li><strong>Integrity:</strong> Transparency and ethical conduct in every consultation.</li>
+              <li><strong>Growth:</strong> Empowering clients through development and learning.</li>
+              <li><strong>Accessibility:</strong> Making mental health support reachable for all.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Values Image -->
+        <div class="rounded-xl overflow-hidden w-full max-w-md mx-auto">
+          <img src="assets/img/about3.jpg" alt="Our Values"
+            class="w-full h-[400px] object-cover sm:h-[450px] lg:h-[420px] rounded-xl" />
+        </div>
+      </div>
+  </section>
+
+
+  <!-- ✅ Proven Impact Section -->
+  <!-- ✅ Proven Impact Section -->
+  <section class="py-24 bg-[#e9f1ff] text-center">
+    <div class="max-w-4xl mx-auto mb-14">
+      <h2
+        class="text-4xl font-extrabold bg-gradient-to-r from-black to-[#3b82f6] bg-clip-text text-transparent tracking-tight">
+        Proven Impact
+      </h2>
+      <p class="text-xl text-[#0a0a0a] font-semibold mt-1">
+        Backed by <span class="text-[#3b82f6]">Experience</span>
+      </p>
+    </div>
+
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6">
+      <!-- Card 1 -->
+      <div
+        class="bg-[#f7faff] border border-[#dbe4f5] rounded-2xl p-10 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(59,130,246,0.15)] transition-all duration-300">
+        <p class="text-gray-500 text-sm mb-3 leading-relaxed">
+          We deliver quality results through expertise,
+          ensuring measurable outcomes.
+        </p>
+        <hr class="border-[#ccd6f6] my-5 w-3/4 mx-auto" />
+        <h3 class="text-5xl font-extrabold text-[#2640b8] mb-3">21k+</h3>
+        <p class="uppercase text-[12px] tracking-wide font-semibold text-gray-600">
+          Therapy Hours Delivered
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div
+        class="bg-[#f7faff] border border-[#dbe4f5] rounded-2xl p-10 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(59,130,246,0.15)] transition-all duration-300">
+        <p class="text-gray-500 text-sm mb-3 leading-relaxed">
+          We deliver quality results through expertise,
+          ensuring measurable outcomes.
+        </p>
+        <hr class="border-[#ccd6f6] my-5 w-3/4 mx-auto" />
+        <h3 class="text-5xl font-extrabold text-[#2640b8] mb-3">80%</h3>
+        <p class="uppercase text-[12px] tracking-wide font-semibold text-gray-600">
+          Client Satisfaction
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div
+        class="bg-[#f7faff] border border-[#dbe4f5] rounded-2xl p-10 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(59,130,246,0.15)] transition-all duration-300">
+        <p class="text-gray-500 text-sm mb-3 leading-relaxed">
+          We deliver quality results through expertise,
+          ensuring measurable outcomes.
+        </p>
+        <hr class="border-[#ccd6f6] my-5 w-3/4 mx-auto" />
+        <h3 class="text-5xl font-extrabold text-[#2640b8] mb-3">15+</h3>
+        <p class="uppercase text-[12px] tracking-wide font-semibold text-gray-600">
+          Years of Clinical Practice
+        </p>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer-section">
+    <div class="footer-container">
+      <!-- Top: Logo + Columns -->
+      <div class="footer-top">
+        <div class="footer-grid">
+
+          <!-- Column 1 -->
+          <div class="footer-col">
+            <img src="assets/img/logo tera.png" alt="Tera Wellbeing Logo" class="footer-logo" />
+            <p class="footer-desc">
+              A psychology-based organisation dedicated to nurturing personal growth and workplace wellbeing.
+            </p>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="footer-col">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Ecosystem</a></li>
+              <li><a href="#">Collaboration</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="footer-col">
+            <h5>Our Services</h5>
+            <ul>
+              <li><a href="#">Counselling & Wellbeing</a></li>
+              <li><a href="#">Training & Capacity Building</a></li>
+              <li><a href="#">Professional Learning</a></li>
+              <li><a href="#">Community Outreach</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4 -->
+          <div class="footer-col">
+            <h5>Contact</h5>
+            <ul class="footer-contact">
+              <li><i class="bi bi-geo-alt"></i> Kochi, Kerala, India</li>
+              <li><i class="bi bi-telephone"></i> +91 825 654 856</li>
+              <li><i class="bi bi-envelope"></i> terawellbeing@gmail.com</li>
+              <li><i class="bi bi-whatsapp"></i> +91 825 654 856</li>
+            </ul>
+
+            <div class="footer-social">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Row -->
+      <div class="footer-bottom">
+        <p>Privacy Policy | Terms & Conditions | Transparency</p>
+        <p>Designed by <span>Binocular Ads</span></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<!-- GSAP for smooth micro-animations (mobile nav) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="assets/js/aos-init.js"></script>
+<script src="assets/js/ui-interactions.js"></script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/our_servise.js"></script>
+
+<!-- ✅ Counter Animation -->
+<script>
+  $(document).ready(function () {
+    let counted = false;
+    $(window).scroll(function () {
+      var oTop = $(".counter").offset().top - window.innerHeight;
+      if (!counted && $(window).scrollTop() > oTop) {
+        $(".counter").each(function () {
+          var $this = $(this), countTo = $this.attr("data-target");
+          $({ countNum: $this.text() }).animate(
+            { countNum: countTo },
+            {
+              duration: 2000,
+              easing: "swing",
+              step: function () { $this.text(Math.floor(this.countNum)); },
+              complete: function () { $this.text(this.countNum); },
+            }
+          );
+        });
+        counted = true;
+      }
+    });
+  });
+</script>
+
+</body>
+
+</html>
+</body>
+
+</html>

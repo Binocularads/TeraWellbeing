@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services</title>
+  <!-- Favicon for most browsers -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/tera_favicon.png">
+
+<!-- Apple Touch Icon (iPhone/iPad homescreen) -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/tera_favicon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <!-- Using Bootstrap Icons as it's included in the original file -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style/servise.css">
+  <link rel="stylesheet" href="assets/style/main.css">
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  
+  <!-- This file was in the original HTML, but I cannot access it. 
+       Styling is done with Tailwind and inline <style> -->
+  <!-- <link rel="stylesheet" href="assets/style/main.css"> -->
+  
+  <style>
+    :root {
+      --brand-blue: #1b2a78;
+      --accent-blue: #2256f3;
+      --panel-blue: #243274;
+      --section-blue: #263A8B;
+      --badge-blue: #2E89FF;
+      --partner-text: #263A8B;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Custom styles from the provided image */
+    .hero-bg {
+      background-image: url('assets/img/servise-hero.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .cta-bg {
+       background-image: url('https://placehold.co/1920x600/374151/ffffff?text=Office+Hallway+BG');
+       background-size: cover;
+       background-position: center;
+       background-repeat: no-repeat;
+    }
+
+    .section-bg-dark {
+      background-color: var(--brand-blue); /* Using a defined variable */
+    }
+    
+    .section-bg-light {
+      background-color: #f0f4ff; /* A light blue, similar to image */
+    }
+    
+    .play-button {
+      width: 60px;
+      height: 60px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .play-button:hover {
+      transform: scale(1.1);
+    }
+    .play-button-icon {
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 18px solid var(--accent-blue);
+      margin-left: 6px;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-800">
+  <div class="min-h-screen flex flex-col items-center">
+    <div class="design-frame w-full">
+      
+<header class="w-full px-6 sm:px-10 py-4 shadow-sm bg-white sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <!-- Logo -->
+    <a href="home.html" class="flex items-center gap-3">
+      <img src="assets/img/logo tera.png" alt="Tera logo" class="w-10 sm:w-12 h-auto object-contain" />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden lg:flex gap-8 text-sm font-medium text-slate-700">
+      <a href="home.html" class="hover:text-[var(--accent-blue)] transition">Home</a>
+      <a href="about.html" class="hover:text-[var(--accent-blue)] transition">About</a>
+      <a href="servise.html" class="hover:text-[var(--accent-blue)] transition">Services</a>
+      <a href="#" class="hover:text-[var(--accent-blue)] transition">Case Studies</a>
+      <a href="#" class="hover:text-[var(--accent-blue)] transition">Team</a>
+      <a href="#" class="hover:text-[var(--accent-blue)] transition">Ecosystem</a>
+      <a href="contact.html" class="hover:text-[var(--accent-blue)] transition">Contact</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobileToggle" class="lg:hidden p-2    hover:bg-slate-50 transition">
+      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+        <path d="M4 7h16M4 12h16M4 17h16" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileNav" class="hidden lg:hidden border-t border-slate-200 bg-white">
+    <div class="px-6 py-4 space-y-3 text-slate-700 font-medium">
+      <a href="home.html" class="block hover:text-[var(--accent-blue)]">Home</a>
+      <a href="about.html" class="block hover:text-[var(--accent-blue)]">About</a>
+      <a href="servise.html" class="block hover:text-[var(--accent-blue)]">Services</a>
+      <a href="#" class="block hover:text-[var(--accent-blue)]">Case Studies</a>
+      <a href="#" class="block hover:text-[var(--accent-blue)]">Team</a>
+      <a href="#" class="block hover:text-[var(--accent-blue)]">Ecosystem</a>
+      <a href="contact.html" class="block hover:text-[var(--accent-blue)]">Contact</a>
+    </div>
+  </div>
+</header>
+
+      <!-- ✅ Hero Section -->
+      <section class="min-h-[90vh] flex items-start justify-center hero-bg text-white pt-32 md:pt-40 px-10 relative">
+        <!-- Overlay for readability -->
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+        <div class="max-w-7xl w-full z-0 relative">
+          <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">Discover Our<br />Mission</h1>
+          <p class="mt-4 text-lg font-medium opacity-90 max-w-lg">
+            Fostering Psychological Health and Resilience
+          </p>
+          <div class="flex items-center gap-6 mt-10">
+            <a href="#" class="inline-flex items-center gap-3 bg-blue-600 text-white font-semibold text-sm px-8 py-3 rounded-full shadow-md hover:bg-blue-700 transition">
+              Learn more
+            </a>
+            <a href="#" class="play-button">
+              <div class="play-button-icon"></div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ✅ How We Help Section -->
+      <section class="py-20 px-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <img src="assets/img/servise_img/Rectangle 151.png" alt="Mental Wellness" class=" w-full">
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">How We Help You Achieve Mental Wellness and Personal Growth</h2>
+            <p class="text-gray-600 leading-relaxed">
+              Our team of dedicated professionals provides a comprehensive range of services designed to support your mental and emotional wellbeing. We believe in a holistic approach, combining evidence-based therapies with personalized care to help you navigate life's challenges and unlock your full potential. Whether you're seeking individual counselling, family therapy, or personal growth workshops, we are here to guide you on your journey.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ✅ How We Can Help Section -->
+      <section class="py-20 px-10 section-bg-dark text-white">
+        <div class="max-w-7xl mx-auto">
+          <h2 class="text-3xl font-bold text-center mb-12">How We Can Help</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Card 1 -->
+            <article class="bg-white text-slate-900 p-6 card-shadow h-96 flex flex-col">
+                  <img src="https://placehold.co/48x48/E0E7FF/3730A3?text=Icon" alt="icon"
+                    class="w-12 h-12 rounded-md" />
+                  <h4 class="mt-4 font-semibold">
+                    Counselling & wellbeing Services
+                  </h4>
+                  <p class="mt-2 text-sm text-slate-500">
+                    Workshops & leadership coaching.
+                  </p>
+                  <a class="mt-auto inline-flex items-center gap-2 text-sm text-blue-600 font-medium" href="#">Explore
+                    →</a>
+                </article>
+            <!-- Card 2 -->
+            <article class="bg-white text-slate-900 p-6 card-shadow h-96 flex flex-col">
+                  <img src="https://placehold.co/48x48/E0E7FF/3730A3?text=Icon" alt="icon"
+                    class="w-12 h-12 rounded-md" />
+                  <h4 class="mt-4 font-semibold">
+                    Counselling & wellbeing Services
+                  </h4>
+                  <p class="mt-2 text-sm text-slate-500">
+                    Workshops & leadership coaching.
+                  </p>
+                  <a class="mt-auto inline-flex items-center gap-2 text-sm text-blue-600 font-medium" href="#">Explore
+                    →</a>
+                </article>
+            <!-- Card 3 -->
+             <article class="bg-white text-slate-900 p-6 card-shadow h-96 flex flex-col">
+                  <img src="https://placehold.co/48x48/E0E7FF/3730A3?text=Icon" alt="icon"
+                    class="w-12 h-12 rounded-md" />
+                  <h4 class="mt-4 font-semibold">
+                    Counselling & wellbeing Services
+                  </h4>
+                  <p class="mt-2 text-sm text-slate-500">
+                    Workshops & leadership coaching.
+                  </p>
+                  <a class="mt-auto inline-flex items-center gap-2 text-sm text-blue-600 font-medium" href="#">Explore
+                    →</a>
+                </article>
+            <!-- Card 4 -->
+            <article class="bg-white text-slate-900 p-6 card-shadow h-96 flex flex-col">
+                  <img src="https://placehold.co/48x48/E0E7FF/3730A3?text=Icon" alt="icon"
+                    class="w-12 h-12 rounded-md" />
+                  <h4 class="mt-4 font-semibold">
+                    Counselling & wellbeing Services
+                  </h4>
+                  <p class="mt-2 text-sm text-slate-500">
+                    Workshops & leadership coaching.
+                  </p>
+                  <a class="mt-auto inline-flex items-center gap-2 text-sm text-blue-600 font-medium" href="#">Explore
+                    →</a>
+                </article>
+          </div>
+        </div>
+      </section>
+      
+      <!-- ✅ Why Tera Wellbeing Section -->
+   <section class="py-20 px-10 bg-white">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+    
+    <!-- Left Content -->
+    <div>
+      <h2 class="text-3xl font-bold text-gray-900 mb-4 leading-snug">
+        Why Tera Wellbeing for Your Wellness Journey?
+      </h2>
+      <p class="text-gray-600 leading-relaxed mb-4">
+        Choosing a partner for your wellness journey is a significant step. 
+        At Tera Wellbeing, we provide a safe, confidential, and compassionate environment.
+      </p>
+      <p class="text-gray-600 leading-relaxed">
+        Our multidisciplinary team is committed to understanding your unique needs and goals, 
+        crafting a personalized plan that empowers you to thrive.
+      </p>
+    </div>
+
+    <!-- Right Accordion -->
+    <div class="divide-y divide-gray-300 border-t border-b border-gray-300">
+      <div class="accordion-item py-4">
+        <button class="w-full flex items-center justify-between text-left font-semibold text-gray-900 accordion-toggle">
+          <span>Individual Therapy & Counselling</span>
+          <i class="bi bi-chevron-down text-xl transition-transform duration-300"></i>
+        </button>
+        <div class="accordion-content text-gray-600 mt-3 hidden">
+          <p class="text-sm leading-relaxed">
+            Our individual therapy sessions provide a confidential space for self-exploration, growth, 
+            and mental wellbeing. Each session is tailored to your personal goals and needs.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item py-4">
+        <button class="w-full flex items-center justify-between text-left font-semibold text-gray-900 accordion-toggle">
+          <span>Couples & Relationship Counselling</span>
+          <i class="bi bi-chevron-down text-xl transition-transform duration-300"></i>
+        </button>
+        <div class="accordion-content text-gray-600 mt-3 hidden">
+          <p class="text-sm leading-relaxed">
+            Strengthen communication, understanding, and connection with your partner through 
+            evidence-based approaches guided by our expert counsellors.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item py-4">
+        <button class="w-full flex items-center justify-between text-left font-semibold text-gray-900 accordion-toggle">
+          <span>Family & Systemic Therapy</span>
+          <i class="bi bi-chevron-down text-xl transition-transform duration-300"></i>
+        </button>
+        <div class="accordion-content text-gray-600 mt-3 hidden">
+          <p class="text-sm leading-relaxed">
+            Family therapy focuses on improving communication, resolving conflicts, 
+            and fostering stronger family dynamics for lasting harmony.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item py-4">
+        <button class="w-full flex items-center justify-between text-left font-semibold text-gray-900 accordion-toggle">
+          <span>Child & Adolescent Support</span>
+          <i class="bi bi-chevron-down text-xl transition-transform duration-300"></i>
+        </button>
+        <div class="accordion-content text-gray-600 mt-3 hidden">
+          <p class="text-sm leading-relaxed">
+            We offer specialized age-appropriate therapy for children and adolescents 
+            to manage emotions, build confidence, and develop resilience.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Meet Our Clinical Team Section -->
+<section class="team-section py-20 px-10 bg-[#1b2a78] text-white">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <!-- Left: Two Images -->
+    <div class="grid grid-cols-2 gap-6">
+      <div class="relative group">
+        <img src="assets/img/servise_img/1person_servise.png" alt="Jamie Oliver" class="rounded-lg shadow-lg w-full h-[340px] object-cover">
+        <div class="text-center mt-3">
+          <h3 class="font-semibold text-lg">Jamie Oliver</h3>
+          <p class="text-sm opacity-80">Therapy Expert</p>
+          <div class="text-yellow-400 mt-1">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+          </div>
+        </div>
+      </div>
+      <div class="relative group">
+        <img src="assets/img/servise_img/Rectangle 92.png" alt="Anna Smith" class="rounded-lg shadow-lg w-full h-[340px] object-cover">
+        <div class="text-center mt-3">
+          <h3 class="font-semibold text-lg">Anna Smith</h3>
+          <p class="text-sm opacity-80">Therapy Expert</p>
+          <div class="text-yellow-400 mt-1">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Text -->
+    <div>
+      <h2 class="text-3xl font-bold mb-4">Meet Our Clinical Team</h2>
+      <p class="text-base opacity-90 leading-relaxed">
+        Our dedicated professionals bring diverse training and deep compassion to your journey. 
+        Find the expert whose specialization best matches your current needs and begin your path to wellness.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ About Tera Wellbeing Section -->
+<section class="about-section py-20 px-10 bg-[#e8f0ff] text-gray-900">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <!-- Left: Text -->
+    <div>
+      <h2 class="text-3xl font-bold text-[#1b2a78] mb-4">About Tera Wellbeing</h2>
+      <p class="text-gray-700 leading-relaxed">
+        We are a leading clinical wellness center committed to fostering psychological health and resilience in our community. 
+        We provide compassionate, evidence-based care to individuals, couples, and families seeking to improve their emotional 
+        well-being and quality of life.
+      </p>
+    </div>
+
+    <!-- Right: Two Images -->
+    <div class="grid grid-cols-2 gap-6">
+      <div class="relative group">
+        <img src="assets/img/servise_img/1person_servise.png" alt="Jamie Oliver" class="rounded-lg shadow-lg w-full h-[340px] object-cover">
+        <div class="text-center mt-3">
+          <h3 class="font-semibold text-lg">Jamie Oliver</h3>
+          <p class="text-sm text-[#1b2a78]">Therapy Expert</p>
+          <div class="text-yellow-500 mt-1">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+          </div>
+        </div>
+      </div>
+      <div class="relative group">
+        <img src="assets/img/servise_img/Rectangle 92.png" alt="Anna Smith" class="rounded-lg shadow-lg w-full h-[340px] object-cover">
+        <div class="text-center mt-3">
+          <h3 class="font-semibold text-lg">Anna Smith</h3>
+          <p class="text-sm text-[#1b2a78]">Therapy Expert</p>
+          <div class="text-yellow-500 mt-1">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+      
+      </main>
+
+   <footer class="footer-section">
+  <div class="footer-container">
+    <!-- Top: Logo + Columns -->
+    <div class="footer-top">
+      <div class="footer-grid">
+        
+        <!-- Column 1 -->
+        <div class="footer-col">
+          <img src="assets/img/logo tera.png" alt="Tera Wellbeing Logo" class="footer-logo" />
+          <p class="footer-desc">
+            A psychology-based organisation dedicated to nurturing personal growth and workplace wellbeing.
+          </p>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Ecosystem</a></li>
+            <li><a href="#">Collaboration</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-col">
+          <h5>Our Services</h5>
+          <ul>
+            <li><a href="#">Counselling & Wellbeing</a></li>
+            <li><a href="#">Training & Capacity Building</a></li>
+            <li><a href="#">Professional Learning</a></li>
+            <li><a href="#">Community Outreach</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul class="footer-contact">
+            <li><i class="bi bi-geo-alt"></i> Kochi, Kerala, India</li>
+            <li><i class="bi bi-telephone"></i> +91 825 654 856</li>
+            <li><i class="bi bi-envelope"></i> terawellbeing@gmail.com</li>
+            <li><i class="bi bi-whatsapp"></i> +91 825 654 856</li>
+          </ul>
+
+          <div class="footer-social">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Row -->
+    <div class="footer-bottom">
+      <p>Privacy Policy | Terms & Conditions | Transparency</p>
+      <p>Designed by <span>Binocular Ads</span></p>
+    </div>
+  </div>
+</footer>
+    </div>
+  </div>
+
+  <!-- GSAP for smooth micro-animations (mobile nav) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="assets/js/aos-init.js"></script>
+  <script src="assets/js/ui-interactions.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/our_servise.js"></script>
+
+  <script>
+    // Mobile menu toggle (legacy fallback removed; ui-interactions.js handles it)
+    // Set current year in footer
+    const yearEl = document.getElementById('year'); if (yearEl) yearEl.textContent = new Date().getFullYear();
+    // Initialize AOS (if not already initialized)
+    if (window.AOS) AOS.init({ duration: 800, once: true });
+  </script>
+  <script src="assets/js/faq_servise.js"></script>
+</body>
+
+</html>
+
