@@ -5,6 +5,12 @@
   --section-blue: #263A8B;
   --badge-blue: #2E89FF;
   --partner-text: #263A8B;
+    --site-header-height: 72px; /* adjust if your header is taller or shorter */
+  --brand-blue: #1b2a78;
+  
+}
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -34,6 +40,129 @@ header {
   position: relative;
   top: 0 !important;
 }
+
+
+
+/* bigger logo in header */
+header a img {
+  width: 140px; /* increase logo size */
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Reset container spacing for hero (so it can breathe) */
+.hero-section {
+  min-height: calc(100vh - var(--site-header-height)); /* fills viewport minus header */
+  display: grid;
+  align-items: center;
+  padding: 48px 24px; /* desktop vertical breathing room */
+  background: #fff; /* keep background white (your choice) */
+  box-sizing: border-box;
+}
+
+/* grid layout: text left, image right */
+.hero-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 560px;
+  gap: 48px;
+  align-items: center;
+}
+
+/* adapt for smaller widths */
+@media (max-width: 1100px) {
+  .hero-inner {
+    grid-template-columns: 1fr 420px;
+    gap: 32px;
+  }
+}
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 24px;
+  }
+}
+
+/* Hero heading and text */
+.hero-title {
+  font-size: clamp(2.6rem, 6.2vw, 4.5rem); /* responsive large headline */
+  line-height: 1.02;
+  font-weight: 800;
+  color: var(--accent-blue);
+  margin: 0 0 18px 0;
+  letter-spacing: -0.02em;
+}
+
+.hero-sub {
+  color: #5b667b;
+  font-size: 1.0625rem;
+  max-width: 42ch;
+  margin: 0 0 22px 0;
+}
+
+/* CTA */
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+  padding: .5rem 1.2rem;
+  background: #1E73FF;
+  color: #fff;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.hero-cta:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(30,115,255,.14); }
+
+/* right illustration/image wrapper */
+.hero-art {
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-art img {
+  width: 100%;
+  height: auto;
+  display:block;
+  object-fit: contain;
+}
+
+/* optional: background accent (small top-right arc like your figma) */
+.hero-accent-arc {
+  position: absolute;
+  right: 8%;
+  top: calc(var(--site-header-height) + 28px);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(30,115,255,0.12);
+  display: contents; /* enable if you want */
+}
+@media(min-width:1200px){ .hero-accent-arc{ display:block; } }
+
+/* remove extra top margin/padding where container has it */
+.hero-section .container, .hero-section .max-w-7xl { padding:0; }
+
+/* ensure nav doesn't push hero content down weirdly when header is sticky */
+header {
+  box-sizing: border-box;
+}
+
+/* small devices */
+@media (max-width: 520px) {
+  .hero-section { padding-top: 28px; padding-bottom: 28px; }
+  .hero-sub { font-size: .98rem; }
+}
+
+
 /* about *
 /* Increase text sizes only for large screens */
 @media (min-width: 1024px) {
@@ -1306,7 +1435,7 @@ header {
   position: relative;
   left: -40px;
   z-index: 1;
-  border-radius: 120px 0 0 120px;
+  border-radius: 0px 0 0 0px;
 }
 
 .img-right {
@@ -1314,7 +1443,7 @@ header {
   top: 10%;
   margin-left: -5px;
   z-index: 2;
-  border-radius: 120px 0 0 120px;
+  border-radius: 0px 0 0 0px;
 }
 
 .arc {
@@ -1389,11 +1518,20 @@ header {
 }
 
 .partner-box img {
-  width: 70%;
+  width: 85%;
   height: auto;
+  border-radius: 40%;
   object-fit: contain;
   filter: brightness(1) contrast(1.1);
   transition: all 0.3s ease;
+}
+.bino img{
+  position: relative;
+  top: 8%;
+}
+.istore img{
+  position: relative;
+  top: 12%;
 }
 .gov img{
    width: 50%;

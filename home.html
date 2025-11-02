@@ -51,9 +51,9 @@
         <a href="home.html" class="hover:text-[var(--accent-blue)] transition">Home</a>
         <a href="about.html" class="hover:text-[var(--accent-blue)] transition">About</a>
         <a href="servise.html" class="hover:text-[var(--accent-blue)] transition">Services</a>
-        <a href="#" class="hover:text-[var(--accent-blue)] transition">Case Studies</a>
-        <a href="#" class="hover:text-[var(--accent-blue)] transition">Team</a>
-        <a href="#" class="hover:text-[var(--accent-blue)] transition">Ecosystem</a>
+        <a href="#Case Studies" class="hover:text-[var(--accent-blue)] transition">Case Studies</a>
+        <a href="#our-team" class="hover:text-[var(--accent-blue)] transition">Team</a>
+        <a href="#Ecosystem" class="hover:text-[var(--accent-blue)] transition">Ecosystem</a>
         <a href="contact.html" class="hover:text-[var(--accent-blue)] transition">Contact</a>
       </nav>
 
@@ -71,9 +71,9 @@
         <a href="home.html" class="block hover:text-[var(--accent-blue)]">Home</a>
         <a href="about.html" class="block hover:text-[var(--accent-blue)]">About</a>
         <a href="servise.html" class="block hover:text-[var(--accent-blue)]">Services</a>
-        <a href="#" class="block hover:text-[var(--accent-blue)]">Case Studies</a>
-        <a href="#" class="block hover:text-[var(--accent-blue)]">Team</a>
-        <a href="#" class="block hover:text-[var(--accent-blue)]">Ecosystem</a>
+        <a href="#Case Studies" class="block hover:text-[var(--accent-blue)]">Case Studies</a>
+        <a href="#our-team" class="block hover:text-[var(--accent-blue)]">Team</a>
+        <a href="#Ecosystem" class="block hover:text-[var(--accent-blue)]">Ecosystem</a>
         <a href="contact.html" class="block hover:text-[var(--accent-blue)]">Contact</a>
       </div>
     </div>
@@ -81,55 +81,53 @@
 
 
   <main>
-    <section class="px-6 lg:px-10 pt-12 pb-20">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <!-- Left side (text) -->
-        <div data-aos="fade-right" data-aos-duration="700" class="lg:pr-12">
-          <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight hero-accent text-center lg:!text-left">
-            Empowering Minds,<br class="hidden sm:block" />
-            Elevating Workplaces.
-          </h1>
-          <p class="mt-6 text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 text-center lg:!text-left ">
-            We will help you understand and solve the problem.
-          </p>
-          <div class="mt-8 lg:mt-6 flex justify-center lg:justify-start">
-            <a href="#"
-              class="inline-flex items-center gap-3 group bg-[#1E73FF] text-white font-medium py-3 px-6 rounded-full transition-all duration-300 hover:bg-[#0056d6] focus:ring-4 focus:ring-blue-300">
-              <span>Learn more</span>
-              <span
-                class="bg-white text-[#1E73FF] w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300 group-hover:translate-x-1">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
-                </svg>
-              </span>
-            </a>
-          </div>
+<!-- HERO: replace existing hero section with this -->
+<section class="hero-section" aria-label="Hero">
+  <div class="hero-inner">
+    <!-- Left column: content -->
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Empowering Minds,<br class="hidden sm:block"> Elevating Workplaces.
+      </h1>
 
-        </div>
+      <p class="hero-sub">
+        We will help you understand and solve the problem.
+      </p>
 
-        <!-- Right side (image) -->
-        <div class="flex justify-center lg:justify-end" data-aos="fade-left" data-aos-duration="700">
-          <div class="w-full max-w-[560px]">
-            <img src="assets/img/hero image.png" alt="hero illustration"
-              class="w-full h-auto rounded-md object-cover" />
-          </div>
-        </div>
+      <div>
+        <a class="hero-cta" href="about.html">
+          <span>Learn more</span>
+          <span style="background:#fff;color:#1E73FF;width:40px;height:40px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;">
+            <!-- arrow -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+          </span>
+        </a>
       </div>
-    </section>
+    </div>
+
+    <!-- Right column: artwork -->
+    <div class="hero-art" aria-hidden="true">
+      <!-- Use a large, clean illustration (SVG/PNG) centered -->
+      <img src="assets/img/hero image.png" alt="People discussing in a group illustration">
+    </div>
+  </div>
+
+
+</section>
 
 
 
-    <section class="px-10 pb-20" id="temple-health">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-    
+
+<section class="px-10 py-20 " id="temple-health">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+
     <!-- LEFT SIDE -->
     <div class="lg:col-span-1" data-aos="fade-up" data-aos-duration="650">
-      <h2 class="text-4xl font-bold text-[var(--accent-blue)] leading-tight">
+      <h2 class="text-4xl font-bold text-[var(--accent-blue)] leading-tight mb-6">
         A Temple of<br />Health
       </h2>
 
-      <ul class="mt-6 space-y-3 text-slate-700">
+      <ul class="space-y-4 text-slate-700 text-base">
         <li class="flex items-start gap-3">
           <i data-lucide="check-circle" class="w-5 h-5 text-[var(--accent-blue)] mt-1"></i>
           Free Consultants
@@ -148,46 +146,42 @@
         </li>
       </ul>
 
-      <a href="#" class="mt-6 inline-flex items-center gap-2 text-[var(--accent-blue)] font-medium">
+      <a href="#" class="mt-8 inline-flex items-center gap-2 text-[var(--accent-blue)] font-medium hover:underline">
         <i data-lucide="play-circle" class="w-6 h-6"></i> Watch our video
       </a>
     </div>
 
-    <!-- RIGHT SIDE (no change) -->
+    <!-- RIGHT SIDE -->
     <div class="lg:col-span-2" data-aos="fade-left" data-aos-duration="650">
-      <div class="bg-white rounded-xl p-0 transition-all">
-        <div class="grid grid-cols-1 gap-6 items-center">
-          <div class="text-left">
-            <h3 class="text-2xl sm:text-3xl font-semibold leading-snug">
-              Empowering Minds — Enhancing Wellbeing
-            </h3>
-            <p class="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed">
-              Tera Wellbeing is a psychology-based organisation dedicated to nurturing personal growth and workplace mental health. We empower individuals and teams through counselling, training and community programs.
-            </p>
+      <div class=" rounded-2xl   transition-all">
+        <div class="text-left">
+          <h3 class="text-3xl font-semibold text-slate-900 leading-snug mb-3">
+            Empowering Minds <br> Enhancing Wellbeing
+          </h3>
+          <p class="text-slate-600 leading-relaxed text-base mb-8">
+            Tera Wellbeing is a psychology-based organisation dedicated to nurturing personal growth and workplace mental health. 
+            We empower individuals and teams through counselling, training and community programs.
+          </p>
 
-            <div class="mt-6 flex flex-col items-start gap-6">
-              <a href="#" 
-   class="flex items-center gap-2 text-[var(--accent-blue)] font-semibold text-sm sm:text-base group">
-  Know More About Us
-  <i data-lucide="arrow-up-right" 
-     class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"></i>
-</a>
+          <a href="about.html" 
+            class="inline-flex items-center gap-2 text-[var(--accent-blue)] font-semibold text-base group mb-10">
+            Know More About Us
+            <i data-lucide="arrow-up-right" 
+              class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"></i>
+          </a>
 
-
-              <div class="grid grid-cols-2 sm:flex sm:flex-nowrap gap-x-6 gap-y-4 sm:gap-12 text-slate-700 w-full">
-                <div class="text-left">
-                  <strong class="text-3xl sm:text-4xl font-bold text-[var(--accent-blue)] counter" data-target="2850">0</strong>
-                  <div class="text-xs sm:text-sm text-slate-500 mt-1">Clients</div>
-                </div>
-                <div class="text-left">
-                  <strong class="text-3xl sm:text-4xl font-bold text-[var(--accent-blue)] counter" data-target="1245">0</strong>
-                  <div class="text-xs sm:text-sm text-slate-500 mt-1">Sessions</div>
-                </div>
-                <div class="text-left">
-                  <strong class="text-3xl sm:text-4xl font-bold text-[var(--accent-blue)] counter" data-target="3358">0</strong>
-                  <div class="text-xs sm:text-sm text-slate-500 mt-1">Outcomes</div>
-                </div>
-              </div>
+          <div class="flex flex-wrap gap-10">
+            <div class="text-left">
+              <strong class="text-4xl font-bold text-[var(--accent-blue)] counter" data-target="2850">0</strong>
+              <div class="text-sm text-slate-500 mt-1">Clients</div>
+            </div>
+            <div class="text-left">
+              <strong class="text-4xl font-bold text-[var(--accent-blue)] counter" data-target="1245">0</strong>
+              <div class="text-sm text-slate-500 mt-1">Sessions</div>
+            </div>
+            <div class="text-left">
+              <strong class="text-4xl font-bold text-[var(--accent-blue)] counter" data-target="3358">0</strong>
+              <div class="text-sm text-slate-500 mt-1">Outcomes</div>
             </div>
           </div>
         </div>
@@ -196,6 +190,9 @@
 
   </div>
 </section>
+
+
+
 
 
 
@@ -234,7 +231,7 @@
                 <h4>Counselling & Wellbeing</h4>
                 <p>One-to-one sessions that enhance mental resilience and personal clarity.</p>
                 <div class="service-cta">
-                  <a class="cta-pill" href="#">Explore Service →</a>
+                  <a class="cta-pill" href="servise.html">Explore Service →</a>
                 </div>
               </article>
 
@@ -250,7 +247,7 @@
                 <h4>Family & Relationship</h4>
                 <p>Supportive therapy for families & couples to strengthen relationships.</p>
                 <div class="service-cta">
-                  <a class="cta-pill" href="#">Explore Service →</a>
+                  <a class="cta-pill" href="servise.html">Explore Service →</a>
                 </div>
               </article>
 
@@ -265,7 +262,7 @@
                 <h4>Wellness Consultation</h4>
                 <p>Promoting holistic wellbeing through psychological assessment and care.</p>
                 <div class="service-cta">
-                  <a class="cta-pill" href="#">Explore Service →</a>
+                  <a class="cta-pill" href="servise.html">Explore Service →</a>
                 </div>
               </article>
 
@@ -283,7 +280,7 @@
                 <h4>Emotional Healing</h4>
                 <p>Guiding individuals towards emotional strength and balance.</p>
                 <div class="service-cta">
-                  <a class="cta-pill" href="#">Explore Service →</a>
+                  <a class="cta-pill" href="servise.html">Explore Service →</a>
                 </div>
               </article>
             </div>
@@ -365,7 +362,7 @@
 
 
 
-    <section class="latest-case-studies py-5 bg-white">
+    <section id="Case Studies" class="latest-case-studies py-5 bg-white">
       <div class="container-fluid ">
         <div class="d-flex justify-content-between align-items-center mb-4 px-4">
           <h2 class="text-3xl lg:text-4xl  mb-8" style="color:#1b2a78;">
@@ -614,8 +611,8 @@
           <div class="partner-box gov "><img src="assets/img/partners/govment of kerela (3).png" alt=""></div>
           <div class="partner-box gov"><img src="assets/img/partners/govment of kerela (2).png" alt=""></div>
           <div class="partner-box gov"><img src="assets/img/partners/govment of kerela (1).png" alt=""></div>
-          <div class="partner-box"><img src="assets/img/partners/BINOCULAR.png" alt=""></div>
-          <div class="partner-box"><img src="assets/img/partners/Untitled-2.png" alt=""></div>
+          <div class="partner-box bino"><img src="assets/img/partners/BINOCULAR.png" alt=""></div>
+          <div class="partner-box istore"><img src="assets/img/partners/Untitled-2.png" alt=""></div>
         </div>
       </div>
 
@@ -625,15 +622,15 @@
 
 
     <!-- OUR ECOSYSTEM -->
-    <section class="our-ecosystem-section py-24 z-n1">
+    <section id="Ecosystem" class="our-ecosystem-section py-24 z-n1">
       <div class="max-w-7xl mx-auto px-6 text-lg-start">
         <h2 class="text-3xl lg:text-4xl font-bold mb-14 text-white">Our Ecosystem</h2>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-20 justify-items-center">
 
           <!-- CARD 1 -->
           <div
-            class="ecosystem-card bg-white w-[320px] h-[380px] flex flex-col items-center text-center px-8 py-12 shadow-sm transition-all duration-500">
+            class="ecosystem-card bg-white w-[280px] h-[380px] flex flex-col items-center text-center px-8 py-12 shadow-sm transition-all duration-500">
             <div
               class="icon-wrapper w-14 h-14 bg-[#2962FF] flex items-center justify-center text-white text-2xl rounded-full transition-all duration-500">
               <i class="bi bi-people-fill"></i>
@@ -653,42 +650,59 @@
 
           <!-- CARD 2 -->
           <div
-            class="ecosystem-card bg-white w-[320px] h-[380px] flex flex-col items-center text-center px-8 py-12 shadow-sm transition-all duration-500">
+            class="ecosystem-card bg-white w-[280px] h-[380px] flex flex-col items-center text-center px-8 py-12 shadow-sm transition-all duration-500">
             <div
               class="icon-wrapper w-14 h-14 bg-[#2962FF] flex items-center justify-center text-white text-2xl rounded-full transition-all duration-500">
               <i class="bi bi-diagram-3-fill"></i>
             </div>
             <div class="card-content transition-all duration-500 mt-6">
-              <h4 class="text-lg font-semibold text-black">Tera Pathways</h4>
+              <h4 class="text-lg font-semibold text-black">Tera Academy</h4>
               <p class="text-sm text-gray-600 mt-3 leading-relaxed">
                 Guided programs and learning tracks to empower personal and professional growth.
               </p>
             </div>
             <a href="#"
               class="ecosystem-link text-[#2962FF] text-sm font-medium mt-auto hover:underline transition-all duration-500">
-              Explore pathways →
+              Join community →
             </a>
           </div>
 
           <!-- CARD 3 -->
           <div
-            class="ecosystem-card bg-white w-[320px] h-[380px] flex flex-col items-center text-center px-8 py-12 shadow-sm transition-all duration-500">
+            class="ecosystem-card bg-white w-[280px] h-[380px] flex flex-col items-center text-center px-8 py-12 shadow-sm transition-all duration-500">
             <div
               class="icon-wrapper w-14 h-14 bg-[#2962FF] flex items-center justify-center text-white text-2xl rounded-full transition-all duration-500">
               <i class="bi bi-lightbulb-fill"></i>
             </div>
             <div class="card-content transition-all duration-500 mt-6">
-              <h4 class="text-lg font-semibold text-black">Tera Labs</h4>
+              <h4 class="text-lg font-semibold text-black">tera Special School</h4>
               <p class="text-sm text-gray-600 mt-3 leading-relaxed">
                 Research and innovation center focused on workplace wellbeing and creativity.
               </p>
             </div>
             <a href="#"
               class="ecosystem-link text-[#2962FF] text-sm font-medium mt-auto hover:underline transition-all duration-500">
-              Learn more →
+              Join community →
             </a>
           </div>
-
+          <!-- CARD 2 -->
+          <div
+            class="ecosystem-card bg-white w-[280px] h-[380px] flex flex-col items-center text-center px-8 py-12 shadow-sm transition-all duration-500">
+            <div
+              class="icon-wrapper w-14 h-14 bg-[#2962FF] flex items-center justify-center text-white text-2xl rounded-full transition-all duration-500">
+              <i class="bi bi-diagram-3-fill"></i>
+            </div>
+            <div class="card-content transition-all duration-500 mt-6">
+              <h4 class="text-lg font-semibold text-black">Tera for Corporates</h4>
+              <p class="text-sm text-gray-600 mt-3 leading-relaxed">
+                Guided programs and learning tracks to empower personal and professional growth.
+              </p>
+            </div>
+            <a href="#"
+              class="ecosystem-link text-[#2962FF] text-sm font-medium mt-auto hover:underline transition-all duration-500">
+              Join community →
+            </a>
+          </div>
         </div>
       </div>
     </section>
