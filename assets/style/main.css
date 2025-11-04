@@ -891,10 +891,86 @@ header {
 }
 
 /* Hover lift */
-.service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 22px 50px rgba(6, 20, 40, 0.12);
+/* Card structure – keep design but push content to bottom */
+.service-card {
+  background: var(--card-bg);
+  color: #0f172a;
+  border-radius: 0px;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* ✅ Push content to bottom */
+  position: relative;
+  overflow: hidden;
+  min-height: 340px;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 24px rgba(6, 20, 40, 0.06);
 }
+
+/* keep icon at top but absolute */
+.service-card .icon {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  background: rgba(46, 107, 255, 0.1);
+  transition: all 0.4s ease;
+}
+
+/* Content area (title + text) */
+.service-card h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0;
+  color: #0f172a;
+  transition: transform 0.4s ease;
+}
+
+.service-card p {
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Button (hidden until hover) */
+.service-cta {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translate(-50%, 60px);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.service-card:hover .service-cta {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+/* Hover animation — card and text go up */
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(6, 20, 40, 0.12);
+}
+
+.service-card:hover h4,
+.service-card:hover p {
+  transform: translateY(-50px);
+}
+
+.service-card:hover .icon {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-6px);
+}
+
 
 /* subtle gradient overlay effect on one "active" card (optional) */
 .service-card.overlay-target::before {
@@ -1778,5 +1854,24 @@ header {
   .footer-bottom {
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+/* Mobile fix: ensure the case study columns stack and are visible on small screens */
+@media (max-width: 768px) {
+  .latest-case-studies .col-md-4 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    display: block !important;
+  }
+  .latest-case-studies .case-card {
+    margin: 0 auto 1rem auto;
+    width: 95%;
+  }
+  /* Ensure the row stops behaving as a horizontal scroll and stacks vertically */
+  .latest-case-studies .row {
+    display: block !important;
+    gap: 1rem !important;
   }
 }
