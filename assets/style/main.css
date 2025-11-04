@@ -7,7 +7,8 @@
   --partner-text: #263A8B;
     --site-header-height: 72px; /* adjust if your header is taller or shorter */
   --brand-blue: #1b2a78;
-  
+
+
 }
 html {
   scroll-behavior: smooth;
@@ -45,7 +46,7 @@ header {
 
 /* bigger logo in header */
 header a img {
-  width: 140px; /* increase logo size */
+  width: 160px; /* increase logo size */
   max-width: 100%;
   height: auto;
   display: block;
@@ -314,7 +315,7 @@ header {
   justify-content: center;
 }
 
-/* Make each card narrower like Latest Case Studies */
+
 .our-specialties-section .col-md-3 {
   flex: 0 0 22%;
   max-width: 22%;
@@ -1001,9 +1002,7 @@ header {
 }
 
 /* latest case study */
-/* ================================
-   LATEST CASE STUDIES (FINAL)
-==================================*/
+
 .latest-case-studies {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -1018,7 +1017,7 @@ header {
 .latest-case-studies .case-card {
   position: relative;
   border-radius: 12px;
-  overflow: hidden;
+  overflow: visible;
   height: 360px;
   transition: all 0.4s ease;
   cursor: pointer;
