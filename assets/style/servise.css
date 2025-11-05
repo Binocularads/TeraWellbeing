@@ -313,7 +313,7 @@ header.bg-white {
 
   /* Ensure hero starts below fixed header */
   .service-hero {
-    margin-top: 70px;
+    margin-top: 0px;
   }
 
   /* Fix for mobile nav dropdown (white background solid) */
