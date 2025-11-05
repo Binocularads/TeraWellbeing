@@ -1,6 +1,8 @@
 {
   "devDependencies": {
+    "@parcel/transformer-webmanifest": "^2.16.1",
     "@tailwindcss/cli": "^4.1.16",
+    "parcel": "^2.16.1",
     "tailwindcss": "^4.1.16"
   }
 }
