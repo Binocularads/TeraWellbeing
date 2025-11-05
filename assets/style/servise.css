@@ -130,9 +130,9 @@ body {
 header,
 .navbar,
 header.bg-white {
-  background: transparent !important;
-  box-shadow: none !important;
-  position: relative !important;
+  background: transparent ;
+  box-shadow: none t;
+  position: relative ;
   top: 0;
   left: 0;
   width: 100%;

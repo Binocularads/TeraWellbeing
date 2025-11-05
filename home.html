@@ -5,25 +5,32 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>home</title>
- <link rel="icon" type="image/png" href="assets/img/favicon/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="assets/img/favicon/favicon.svg" />
-<link rel="shortcut icon" href="assets/img/favicon/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png" />
+  <!-- ===== FAVICONS ===== -->
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon/favicon.svg">
+  <link rel="shortcut icon" href="assets/img/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
 
-
-
-
+  <!-- ===== GOOGLE FONT ===== -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://unpkg.com/lucide@latest"></script>
+    rel="stylesheet">
 
+  <!-- ===== ICON LIBRARIES ===== -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- ===== FRAMEWORKS & LIBRARIES ===== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="dist/output.css">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- ===== ANIMATIONS ===== -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- ===== CUSTOM STYLES ===== -->
+  <link rel="stylesheet" href="dist/output.css">
   <link rel="stylesheet" href="assets/style/main.css">
+
   <style>
     :root {
       --brand-blue: #1b2a78;
@@ -33,7 +40,6 @@
       --badge-blue: #2E89FF;
       --partner-text: #263A8B;
     }
-    
   </style>
 </head>
 
@@ -81,117 +87,124 @@
 
 
   <main>
-<!-- HERO: replace existing hero section with this -->
-<section class="hero-section" aria-label="Hero">
-  <div class="hero-inner">
-    <!-- Left column: content -->
-    <div class="hero-content">
-      <h1 class="hero-title">
-        Empowering Minds,<br class="hidden sm:block"> Elevating Workplaces.
-      </h1>
+    <!-- HERO: -->
+    <section class="hero-section" aria-label="Hero">
+      <div class="hero-inner">
+        <!-- Left column:  -->
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Empowering Minds,<br class="hidden sm:block"> Elevating Workplaces.
+          </h1>
 
-      <p class="hero-sub">
-        We will help you understand and solve the problem.
-      </p>
-
-      <div>
-        <a class="hero-cta" href="about.html">
-          <span>Learn more</span>
-          <span style="background:#fff;color:#1E73FF;width:40px;height:40px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;">
-            <!-- arrow -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
-          </span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Right column: artwork -->
-    <div class="hero-art" aria-hidden="true">
-      <!-- Use a large, clean illustration (SVG/PNG) centered -->
-      <img src="assets/img/hero image.png" alt="People discussing in a group illustration">
-    </div>
-  </div>
-
-
-</section>
-
-
-
-
-<section class="px-10 py-20" id="temple-health">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-
-    <!-- LEFT SIDE (Highlighted Header) -->
-    <div class="lg:col-span-1" data-aos="fade-up" data-aos-duration="650">
-      <h2 class="text-5xl lg:text-6xl font-extrabold text-[var(--accent-blue)] leading-tight mb-8">
-        A Temple of<br />Health
-      </h2>
-
-      <ul class="space-y-5 text-slate-700 text-lg leading-relaxed">
-        <li class="flex items-start gap-3">
-          <i data-lucide="check-circle" class="w-6 h-6 text-[var(--accent-blue)] mt-1"></i>
-          <span>Free Consultants</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <i data-lucide="check-circle" class="w-6 h-6 text-[var(--accent-blue)] mt-1"></i>
-          <span>Mental Satisfactions</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <i data-lucide="check-circle" class="w-6 h-6 text-[var(--accent-blue)] mt-1"></i>
-          <span>Practical Training</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <i data-lucide="check-circle" class="w-6 h-6 text-[var(--accent-blue)] mt-1"></i>
-          <span>Psychology-based Approach</span>
-        </li>
-      </ul>
-
-      <a href="#" 
-        class="mt-10 inline-flex items-center gap-3 text-[var(--accent-blue)] font-semibold text-lg hover:underline transition-all duration-300 group">
-        <i data-lucide="play-circle" class="w-7 h-7 group-hover:scale-110 transition-transform"></i> 
-        Watch our video
-      </a>
-    </div>
-
-    <!-- RIGHT SIDE (Enhanced Highlighted Block) -->
-    <div class="lg:col-span-2" data-aos="fade-left" data-aos-duration="650">
-      <div class="  ">
-        <div class="text-left">
-          <h3 class="text-4xl font-bold text-slate-900 leading-snug mb-4">
-            Empowering Minds<br>Enhancing Wellbeing
-          </h3>
-          <p class="text-slate-600 leading-relaxed text-base mb-8">
-            Tera Wellbeing is a psychology-based organisation dedicated to nurturing personal growth and workplace mental health. 
-            We empower individuals and teams through counselling, training and community programs.
+          <p class="hero-sub">
+            We will help you understand and solve the problem.
           </p>
 
-          <a href="about.html" 
-            class="inline-flex items-center gap-2 text-[var(--accent-blue)] font-semibold text-base group mb-10">
-            Know More About Us
-            <i data-lucide="arrow-up-right" 
-              class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"></i>
-          </a>
+          <div>
+            <a class="hero-cta" href="about.html">
+              <span>Learn more</span>
+              <span
+                style="background:#fff;color:#1E73FF;width:40px;height:40px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;">
+                <!-- arrow -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
 
-          <div class="flex flex-wrap justify-between gap-10">
+        <!-- Right column: artwork -->
+        <div class="hero-art" aria-hidden="true">
+          <img src="assets/img/hero image.png" alt="People discussing in a group illustration">
+        </div>
+      </div>
+
+
+    </section>
+
+
+
+
+    <section class="px-10 py-20" id="temple-health">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+
+        <!-- LEFT SIDE -->
+        <div class="lg:col-span-1" data-aos="fade-up" data-aos-duration="650">
+          <h2 class="text-5xl lg:text-6xl font-extrabold text-[var(--accent-blue)] leading-tight mb-8">
+            A Temple of<br />Health
+          </h2>
+
+          <ul class="space-y-5 text-slate-700 text-lg leading-relaxed">
+            <li class="flex items-start gap-3">
+              <i data-lucide="check-circle" class="w-6 h-6 text-[var(--accent-blue)] mt-1"></i>
+              <span>Free Consultants</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="check-circle" class="w-6 h-6 text-[var(--accent-blue)] mt-1"></i>
+              <span>Mental Satisfactions</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="check-circle" class="w-6 h-6 text-[var(--accent-blue)] mt-1"></i>
+              <span>Practical Training</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="check-circle" class="w-6 h-6 text-[var(--accent-blue)] mt-1"></i>
+              <span>Psychology-based Approach</span>
+            </li>
+          </ul>
+
+          <a href="#"
+            class="mt-10 inline-flex items-center gap-3 text-[var(--accent-blue)] font-semibold text-lg hover:underline transition-all duration-300 group">
+            <i data-lucide="play-circle" class="w-7 h-7 group-hover:scale-110 transition-transform"></i>
+            Watch our video
+          </a>
+        </div>
+
+        <!-- RIGHT SIDE  -->
+        <div class="lg:col-span-2" data-aos="fade-left" data-aos-duration="650">
+          <div class="  ">
             <div class="text-left">
-              <strong class="text-5xl font-extrabold text-[var(--accent-blue)] counter" data-target="2850">0</strong>
-              <div class="text-sm text-slate-500 mt-1">Clients</div>
-            </div>
-            <div class="text-left">
-              <strong class="text-5xl font-extrabold text-[var(--accent-blue)] counter" data-target="1245">0</strong>
-              <div class="text-sm text-slate-500 mt-1">Sessions</div>
-            </div>
-            <div class="text-left">
-              <strong class="text-5xl font-extrabold text-[var(--accent-blue)] counter" data-target="3358">0</strong>
-              <div class="text-sm text-slate-500 mt-1">Outcomes</div>
+              <h3 class="text-4xl font-bold text-slate-900 leading-snug mb-4">
+                Empowering Minds<br>Enhancing Wellbeing
+              </h3>
+              <p class="text-slate-600 leading-relaxed text-base mb-8">
+                Tera Wellbeing is a psychology-based organisation dedicated to nurturing personal growth and workplace
+                mental health.
+                We empower individuals and teams through counselling, training and community programs.
+              </p>
+
+              <a href="about.html"
+                class="inline-flex items-center gap-2 text-[var(--accent-blue)] font-semibold text-base group mb-10">
+                Know More About Us
+                <i data-lucide="arrow-up-right"
+                  class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"></i>
+              </a>
+
+              <div class="flex flex-wrap justify-between gap-10">
+                <div class="text-left">
+                  <strong class="text-5xl font-extrabold text-[var(--accent-blue)] counter"
+                    data-target="2850">0</strong>
+                  <div class="text-sm text-slate-500 mt-1">Clients</div>
+                </div>
+                <div class="text-left">
+                  <strong class="text-5xl font-extrabold text-[var(--accent-blue)] counter"
+                    data-target="1245">0</strong>
+                  <div class="text-sm text-slate-500 mt-1">Sessions</div>
+                </div>
+                <div class="text-left">
+                  <strong class="text-5xl font-extrabold text-[var(--accent-blue)] counter"
+                    data-target="3358">0</strong>
+                  <div class="text-sm text-slate-500 mt-1">Outcomes</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
-    </div>
-
-  </div>
-</section>
+    </section>
 
 
 
@@ -199,13 +212,13 @@
 
 
 
-    <!-- SERVICES - fade tabs style -->
+    <!-- SERVICES  -->
     <section class="services-section" aria-labelledby="services-heading">
       <div class="container">
         <div class="services-head">
           <h3 id="services-heading">Our Services</h3>
 
-          <!-- Tabs (desktop aligned to right, mobile becomes horizontal scroller) -->
+          
           <nav class="services-tabs" role="tablist" aria-label="Service categories">
             <button class="tab-btn active" data-tab="tab-counselling" role="tab"
               aria-selected="true">Counselling</button>
@@ -217,7 +230,7 @@
           </nav>
         </div>
 
-        <!-- Tab contents: each "panel" includes a grid of up to 4 cards; you can adjust card content -->
+      
         <div class="tab-panels">
 
           <!-- Counselling Panel -->
@@ -358,13 +371,13 @@
             </div>
           </div>
 
-        </div> <!-- .tab-panels -->
-      </div> <!-- .container -->
+        </div> 
+      </div> 
     </section>
 
 
 
-
+    <!-- ---latest case studies --- -->
     <section id="Case Studies" class="latest-case-studies py-5 bg-white">
       <div class="container-fluid ">
         <div class="d-flex justify-content-between align-items-center mb-4 px-4">
@@ -426,7 +439,7 @@
         </div>
       </div>
     </section>
-
+  <!-- ---how it work --- -->
     <section class="px-10 py-20 bg-white">
       <div class="max-w-4xl mx-auto text-center">
         <h3 class="text-4xl font-bold">How it Works</h3>
@@ -529,7 +542,7 @@
     </section>
 
 
-
+  <!-- ----our team---- -->
     <section class="px-6 lg:px-10 py-20 " id="our-team">
       <div class="max-w-7xl mx-auto">
         <h3 class="text-3xl font-bold text-center text-[var(--accent-blue)]" data-aos="fade-up">
@@ -585,43 +598,43 @@
 
 
 
-<!-- ================= BRAND & PARTNERS SECTION ================= -->
-<section class="brand-partners-section py-5 bg-[var(--brand-blue)] text-white">
-  <div class="container-fluid px-5">
-    <div class="row align-items-center">
-      
-      <!-- LEFT IMAGE SECTION -->
-      <div class="col-lg-6 d-flex justify-content-center position-relative mb-5 mb-lg-0" data-aos="fade-right">
-        <div class="image-wrapper position-relative">
-          <img src="assets/img/Rectangle 104.png" alt="hallway" class="img-left">
-          <img src="assets/img/Rectangle 103.png" alt="person" class="img-right">
-          <img src="assets/img/Ellipse 17.png" alt="arc" class="arc">
-          <div class="badge-box text-center">
-            <div class="badge-number">50+</div>
-            <div class="badge-sub">BRAND<br>COLLABORATE<br>WITH US</div>
+    <!--  BRAND & PARTNERS SECTION  -->
+    <section class="brand-partners-section py-5 bg-[var(--brand-blue)] text-white">
+      <div class="container-fluid px-5">
+        <div class="row align-items-center">
+
+          <!-- LEFT IMAGE SECTION -->
+          <div class="col-lg-6 d-flex justify-content-center position-relative mb-5 mb-lg-0" data-aos="fade-right">
+            <div class="image-wrapper position-relative">
+              <img src="assets/img/Rectangle 104.png" alt="hallway" class="img-left">
+              <img src="assets/img/Rectangle 103.png" alt="person" class="img-right">
+              <img src="assets/img/Ellipse 17.png" alt="arc" class="arc">
+              <div class="badge-box text-center">
+                <div class="badge-number">50+</div>
+                <div class="badge-sub">BRAND<br>COLLABORATE<br>WITH US</div>
+              </div>
+            </div>
           </div>
+
+          <!-- RIGHT TEXT + GRID -->
+          <div class="col-lg-6" data-aos="fade-left">
+            <h1 class="fw-bold mb-3 text-xl lg:text-3xl">Brand & Partners</h1>
+            <p class="text-light text-sm lg:text-base opacity-75 mb-4">
+              Collaborating with leading organisations to deliver better mental health outcomes.
+            </p>
+
+            <div class="partners-grid">
+              <div class="partner-box gov "><img src="assets/img/partners/govment of kerela (3).png" alt=""></div>
+              <div class="partner-box gov"><img src="assets/img/partners/govment of kerela (2).png" alt=""></div>
+              <div class="partner-box gov"><img src="assets/img/partners/govment of kerela (1).png" alt=""></div>
+              <div class="partner-box bino"><img src="assets/img/partners/BINOCULAR.png" alt=""></div>
+              <div class="partner-box istore"><img src="assets/img/partners/Untitled-2.png" alt=""></div>
+            </div>
+          </div>
+
         </div>
       </div>
-
-      <!-- RIGHT TEXT + GRID -->
-      <div class="col-lg-6" data-aos="fade-left">
-        <h1 class="fw-bold mb-3 text-xl lg:text-3xl">Brand & Partners</h1>
-        <p class="text-light text-sm lg:text-base opacity-75 mb-4">
-          Collaborating with leading organisations to deliver better mental health outcomes.
-        </p>
-
-        <div class="partners-grid">
-          <div class="partner-box gov "><img src="assets/img/partners/govment of kerela (3).png" alt=""></div>
-          <div class="partner-box gov"><img src="assets/img/partners/govment of kerela (2).png" alt=""></div>
-          <div class="partner-box gov"><img src="assets/img/partners/govment of kerela (1).png" alt=""></div>
-          <div class="partner-box bino"><img src="assets/img/partners/BINOCULAR.png" alt=""></div>
-          <div class="partner-box istore"><img src="assets/img/partners/Untitled-2.png" alt=""></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
 
     <!-- OUR ECOSYSTEM -->
@@ -865,30 +878,32 @@
       </div>
     </section>
     <!-- whatsap -->
-<section class="relative py-16 px-6 sm:px-10">
-  <div class="max-w-6xl mx-auto bg-[#D9FF42] rounded-3xl flex flex-col sm:flex-row justify-between items-center gap-8 px-10 py-12 shadow-[0_6px_25px_rgba(0,0,0,0.08)]">
-    
-    <!-- LEFT TEXT -->
-    <div class="flex-1 text-left">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-3">
-        Let’s Discuss<br />With Our Team
-      </h2>
-      <p class="text-sm sm:text-base text-slate-800 font-medium">
-        <span class="font-semibold text-slate-900">Giving You The Best</span><br />
-        Giving You The Best Price And Coverage For Your Property Needs.
-      </p>
-    </div>
+    <section class="relative py-16 px-6 sm:px-10">
+      <div
+        class="max-w-6xl mx-auto bg-[#D9FF42] rounded-3xl flex flex-col sm:flex-row justify-between items-center gap-8 px-10 py-12 shadow-[0_6px_25px_rgba(0,0,0,0.08)]">
 
-    <!-- RIGHT ICON BUTTON -->
-    <a href="https://wa.me/917510750749?text=Hi%20Tera%20Wellbeing%20Team%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
-       target="_blank"
-       class="group flex justify-center items-center w-24 h-24 border border-slate-900 rounded-2xl transition-all duration-300 hover:bg-slate-900">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-slate-900 group-hover:text-[#D9FF42]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H8m9 0v9" />
-      </svg>
-    </a>
-  </div>
-</section>
+        <!-- LEFT TEXT -->
+        <div class="flex-1 text-left">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-3">
+            Let’s Discuss<br />With Our Team
+          </h2>
+          <p class="text-sm sm:text-base text-slate-800 font-medium">
+            <span class="font-semibold text-slate-900">Giving You The Best</span><br />
+            Giving You The Best Price And Coverage For Your Property Needs.
+          </p>
+        </div>
+
+        <!-- RIGHT ICON BUTTON -->
+        <a href="https://wa.me/917510750749?text=Hi%20Tera%20Wellbeing%20Team%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+          target="_blank"
+          class="group flex justify-center items-center w-24 h-24 border border-slate-900 rounded-2xl transition-all duration-300 hover:bg-slate-900">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-slate-900 group-hover:text-[#D9FF42]"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H8m9 0v9" />
+          </svg>
+        </a>
+      </div>
+    </section>
 
 
 
@@ -948,7 +963,9 @@
 
             <div class="footer-social">
               <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.instagram.com/terawellbeing?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="bi bi-instagram"></i></a>
+              <a
+                href="https://www.instagram.com/terawellbeing?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
+                  class="bi bi-instagram"></i></a>
               <a href="#"><i class="bi bi-envelope"></i></a>
             </div>
           </div>
@@ -958,7 +975,7 @@
       <!-- Bottom Row -->
       <div class="footer-bottom">
         <p>Privacy Policy | Terms & Conditions | Transparency</p>
-        <p>Designed by  <a href="https://www.binocularads.com/"><span>Binocular Ads</span></a></p>
+        <p>Designed by <a href="https://www.binocularads.com/"><span>Binocular Ads</span></a></p>
       </div>
     </div>
   </footer>
@@ -995,9 +1012,9 @@
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  lucide.createIcons();
-</script>
+  <script>
+    lucide.createIcons();
+  </script>
 
 </body>
 
