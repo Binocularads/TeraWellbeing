@@ -145,13 +145,13 @@ header.bg-white {
   0%, 25% {
     background-image: url("../img/s1.jpg");
   }
-  26%, 50% {
+  25%, 50% {
     background-image: url("../img/s2.jpg");
   }
-  51%, 75% {
+  40%, 75% {
     background-image: url("../img/s3.jpg");
   }
-  76%, 100% {
+  75%, 100% {
     background-image: url("../img/s4.jpg");
   }
 }
