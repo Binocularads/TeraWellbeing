@@ -168,12 +168,12 @@
       </section>
 
       <!-- ✅ How We Can Help Section -->
-    <section class=" tab-panel py-20 px-10 section-bg- ">
+    <section class=" tab-panel py-20 px-10 bg-[#1b2a78]  ">
   <div class="max-w-7xl mx-auto ">
     <h2 class="text-3xl font-bold text-center mb-12">How We Can Help</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       
-     <article class="service-card" tabindex="0">
+     <article class="service-card bg-white" tabindex="0">
                 <div class="icon" aria-hidden="true">
                   <!-- speech icon -->
                   <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
@@ -188,7 +188,7 @@
                 </div>
               </article>
 
-       <article class="service-card" tabindex="0">
+       <article class="service-card bg-white" tabindex="0">
                 <div class="icon" aria-hidden="true">
                   <!-- speech icon -->
                   <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
@@ -203,7 +203,7 @@
                 </div>
               </article>
 
-      <article class="service-card " tabindex="0">
+      <article class="service-card bg-white" tabindex="0">
                 <div class="icon" aria-hidden="true">
                   <!-- speech icon -->
                   <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
@@ -218,7 +218,7 @@
                 </div>
               </article>
 
-    <article class="service-card " tabindex="0">
+    <article class="service-card bg-white" tabindex="0">
                 <div class="icon" aria-hidden="true">
                   <!-- speech icon -->
                   <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
@@ -506,6 +506,18 @@
 </script>
 
 <script src="assets/js/faq_servise.js"></script>
+<script>
+  let slides = document.querySelectorAll(".hero-slider img");
+  let current = 0;
+
+  function nextSlide() {
+    slides[current].classList.remove("active");
+    current = (current + 1) % slides.length;
+    slides[current].classList.add("active");
+  }
+
+  setInterval(nextSlide, 7000); // change every 7s (adjust if needed)
+</script>
 
 
 </body>
