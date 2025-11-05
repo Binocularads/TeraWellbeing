@@ -1,3 +1,21 @@
+header {
+  margin: 0 !important;
+  padding-top: 0.5rem !important;
+  /* small breathing space */
+  padding-bottom: 0.5rem !important;
+  position: relative;
+  top: 0 !important;
+}
+
+
+
+/* bigger logo in header */
+header a img {
+  width: 160px; /* increase logo size */
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 .footer-section {
   background-color: #101010;
   color: #ccc;
@@ -116,3 +134,25 @@
   }
 }
 
+  .gradient-text {
+    background: linear-gradient(90deg, #1b2a78 0%, #3366ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+  }
+
+  .gradient-header {
+    background: linear-gradient(90deg, #1b2a78 0%, #3366ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+  }
+    .gradient-number {
+    background: linear-gradient(90deg, #1b2a78 0%, #3366ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+  }
