@@ -6,6 +6,18 @@
       --badge-blue: #2E89FF;
       --partner-text: #263A8B;
     }
+    /* === Fix: Remove unwanted white strip above hero === */
+header {
+  background: transparent !important;
+  position: relative !important;
+  z-index: 10;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* ensures no white peek from behind */
+}
    /* === HERO SECTION: Full Cover Background Under Navbar === */
 .service-hero {
   position: relative;
@@ -131,16 +143,16 @@ header.bg-white {
 /* === Background Fade Animation === */
 @keyframes heroFade {
   0%, 25% {
-    background-image: url("../img/s_1.jpg");
+    background-image: url("../img/s_1-min.jpg");
   }
   26%, 50% {
-    background-image: url("../img/s_2.jpg");
+    background-image: url("../img/s_2-min.jpg");
   }
   51%, 75% {
-    background-image: url("../img/s_3.jpg");
+    background-image: url("../img/s_3-min.jpg");
   }
   76%, 100% {
-    background-image: url("../img/s_4.jpg");
+    background-image: url("../img/s_4-min.jpg");
   }
 }
 
