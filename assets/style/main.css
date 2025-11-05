@@ -877,7 +877,7 @@ header {
 
 /* CTA style */
 .cta-pill {
-  background: var(--accent);
+  background: var(--accent-blue);
   color: #fff;
   padding: 10px 18px;
   border-radius: 999px;
@@ -967,7 +967,7 @@ header {
 
 .service-card:hover .icon {
   background: var(--accent);
-  color: #fff;
+  color:var(--accent-blue);
   transform: translateY(-6px);
 }
 

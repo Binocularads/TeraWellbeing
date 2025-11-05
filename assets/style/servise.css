@@ -6,6 +6,186 @@
       --badge-blue: #2E89FF;
       --partner-text: #263A8B;
     }
+   /* === HERO SECTION: Full Cover Background Under Navbar === */
+.service-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full viewport height */
+  overflow: hidden;
+  margin-top: -90px; /* pull hero under navbar */
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Background slideshow (auto image change) */
+.service-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* parallax feel on desktop */
+  animation: heroFade 24s infinite ease-in-out;
+  transition: opacity 1.5s ease;
+  z-index: -2;
+}
+
+/* Gradient overlay for visibility */
+.service-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.15)
+  );
+  z-index: -1;
+}
+
+/* Hero text content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  max-width: 700px;
+  padding: 0 2rem;
+  margin-left: 8%;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-content h1 span {
+  color: var(--accent-blue, #2e6bff);
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-primary {
+  background: var(--accent-blue, #2e6bff);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #1b56f0;
+  transform: translateY(-2px);
+}
+
+.btn-play {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-play:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+
+/* === Transparent Navbar === */
+header,
+.navbar,
+header.bg-white {
+  background: transparent !important;
+  box-shadow: none !important;
+  position: relative !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  backdrop-filter: none !important;
+}
+
+/* === Background Fade Animation === */
+@keyframes heroFade {
+  0%, 25% {
+    background-image: url("../img/s_1.jpg");
+  }
+  26%, 50% {
+    background-image: url("../img/s_2.jpg");
+  }
+  51%, 75% {
+    background-image: url("../img/s_3.jpg");
+  }
+  76%, 100% {
+    background-image: url("../img/s_4.jpg");
+  }
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 1024px) {
+  .service-hero {
+    height: 90vh;
+    background-attachment: scroll;
+  }
+
+  .hero-content {
+    margin-left: 5%;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .service-hero {
+    height: 100vh;
+    margin-top: -70px;
+    background-attachment: scroll;
+  }
+
+  .hero-content {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1.5rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+ 
 /* whatsapp banner */
 .whatsapp-section {
   position: relative;
