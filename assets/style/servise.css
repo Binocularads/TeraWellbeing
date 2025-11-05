@@ -298,3 +298,37 @@ header.bg-white {
   .hero-content h1 { font-size: 1.8rem; }
   .team-img { height: 220px; }
 }
+/* === Fix: Navbar background + layering for mobile === */
+@media (max-width: 1024px) {
+  header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    z-index: 9999;
+  }
+
+  /* Ensure hero starts below fixed header */
+  .service-hero {
+    margin-top: 70px;
+  }
+
+  /* Fix for mobile nav dropdown (white background solid) */
+  #mobileNav {
+    background: rgba(255, 255, 255, 0.98) !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  }
+
+  /* Fix nav text color visibility */
+  #mobileNav a {
+    color: #0f172a !important;
+  }
+}
