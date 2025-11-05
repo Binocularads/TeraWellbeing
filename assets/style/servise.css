@@ -143,7 +143,7 @@ header.bg-white {
 /* === Background Fade Animation === */
 @keyframes heroFade {
   0%, 25% {
-    background-image: url("../img/s_1-min.jpg");
+    background-image: url("../img/s_5-min.jpg");
   }
   26%, 50% {
     background-image: url("../img/s_2-min.jpg");
