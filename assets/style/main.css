@@ -374,8 +374,8 @@ header {
 
 /* === OUR ECOSYSTEM === */
 .our-ecosystem-section {
-  background: #283b8c;
-  color: #fff;
+  background: #ffffff;
+  color: #8400ff;
   overflow: hidden;
 }
 
@@ -1650,8 +1650,8 @@ header {
 
 /* Fix extra gap */
 .our-ecosystem-section {
-  background: var(--brand-blue);
-  color: #fff;
+  background:white;
+  color: var(--brand-blue);
   padding-top: 5rem !important;
   margin-top: 0 !important;
 }
@@ -1693,6 +1693,11 @@ header {
 .ecosystem-card:hover .ecosystem-link {
   transform: translateY(-3px);
   color: #0039cb;
+}
+.eco-card:hover .blur-overlay {
+  backdrop-filter: blur(12px);
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease;
 }
 
 /* Responsive tweak */
